@@ -2,13 +2,13 @@
 
 interface IUsuario {
 
-  public function select();
+    public function select();
 
-  public function selectById($id);
+    public function selectById($id);
 
-  public function insert(usuario $usuario);
+    public function insert(usuario $mer_usuario);
 
-  public function update(usuario $usuario);
+    public function update(usuario $mer_usuario);
 
-  public function delete($id);
+    public function delete($id);
 }
