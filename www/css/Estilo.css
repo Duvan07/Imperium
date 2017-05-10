@@ -73,9 +73,24 @@ a.list-group-item:hover{
     margin-top: 100px;
     margin-left: 300px;
 }
+.formularioDp{
+  margin-top: 20px;
+}
+.datosP{
+  font-size: 13px;  
+}
 .btnguardar:focus{
     background-color: #007bcf;
     color: #ffffff; 
+}
+.siguietne{
+  font-size: 80%;
+  color: white;
+  background-color: #00a2ee;
+  font-weight: bolder;
+}
+.panel{  
+  border-radius: 1%;
 }
 .page-header {
     margin-top: 0px;
