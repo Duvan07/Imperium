@@ -9,5 +9,9 @@ angular.module('imperium').config(['$routeProvider',
                     controller: 'crearusuarioController',
                     templateUrl: 'app/template/crearusuario.html'
                 }).
+                when('/acercade', {
+                    controller: 'acercadeController',
+                    templateUrl: 'app/template/acercade.html'
+                }).
                 otherwise('/');
     }]);
