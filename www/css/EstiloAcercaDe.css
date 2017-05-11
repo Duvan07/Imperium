@@ -1,0 +1,16 @@
+.contenido {
+  height: calc(100vh - 244px);
+  overflow: auto;
+}
+.contenido .titulo{
+    text-align: center;
+
+}
+.contenido .comentario{
+  text-align: justify;
+}
+
+.Imagen{
+    width: 100px;
+    height: 100px;
+}
