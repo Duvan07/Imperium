@@ -12,6 +12,10 @@ angular.module('imperium').config(['$routeProvider',
                 when('/acercade', {
                     controller: 'acercadeController',
                     templateUrl: 'app/template/acercade.html'
-                }).
+                }). 
+                         when('/controlentradasalida', {
+                    controller: 'controlentradasalidaController',
+                    templateUrl: 'app/template/controlentradasalida.html'
+                }). 
                 otherwise('/');
     }]);
