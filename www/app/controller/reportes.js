@@ -1,7 +1,7 @@
-angular.module('imperium').controller('menuprincipalController', ['$scope', function ($scope) {
-$scope.tabs = [
+angular.module('imperium').controller('reportesController', ['$scope', function ($scope) {
+
+    $scope.tabs = [
       {tab: 'active', show: true},
-      {tab: '', show: false},
       {tab: '', show: false},
       {tab: '', show: false}
     ];
@@ -20,10 +20,5 @@ $scope.tabs = [
       $scope.tabs = [];
       $scope.tabs[2] = {tab: 'active', show: true};
     };
-    
-    $scope.activeTab4 = function () {
-      $scope.tabs = [];
-      $scope.tabs[3] = {tab: 'active', show: true};
-    };
-    
+
   }]);

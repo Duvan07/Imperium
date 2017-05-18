@@ -1,192 +1,172 @@
 <link rel="stylesheet" href="css/Estilo.css">
-<div class="col-lg-12 header">
-    <div class="container container-fluid">
-        <div class="panel panel-default menu col-lg-3">
-            <div class="panel-body list-group">
-                <a href="#!/crearusuario" class="list-group-item botonMenu"><div class="centrarTexto">AGREGAR NUEVO USUARIO</div></a>
-                <a href="#!/MenuPrincipal" class="list-group-item botonMenu"><div class="centrarTexto">REGISTRAR NUEVA PERSONA</div></a>
-                <a href="#!/controlentradasalida" class="list-group-item botonMenu"><div style="text-align: center;">CONTROL DE ENTRADA Y SALIDA DEL PERSONAL</div></a>
-                <a href="#!/reportes" class="list-group-item botonMenu "><div class="centrarTexto">REPORTES DEL PERSONAL</div></a>
-            </div>
-        </div>
-        <form class="form-inline frmSearch text-right col-lg-6">
-            <div class="input-group">
-                <input type="text" class="form-control masLargo" placeholder="Buscar por...">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                </span>
-            </div>
-        </form>
-    </div>
-</div>
-<div class="container container-fluid contenedor">
-    <div class="col-lg-offset-3 col-lg-9 principal">
-        <div class="panel panel-default contenido">
-            <div class="panel-body">
-                <div>
-                    <!-- Nav tabs -->
-                    <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="datosP active"><a href="#datosP" aria-controls="datosP" role="tab" data-toggle="tab">DATOS PERSONALES</a></li>
-                        <li role="presentation" class="datosP"><a href="#informacionB" aria-controls="profile" role="tab" data-toggle="tab">INFORMACION BASICA</a></li>
-                        <li role="presentation" class="datosP"><a href="#informacionC" aria-controls="messages" role="tab" data-toggle="tab">INFORMACION DE CONTACTO</a></li>
-                        <li role="presentation" class="datosP"><a href="#informacionF" aria-controls="settings" role="tab" data-toggle="tab">INFORMACION FAMILIAR</a></li>
-                    </ul>
-                    <!-- Tab panes -->
-                    <!-- DATOS PERSONALES -->
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane fade in active" id="datosP">
-                            <div class="row formularioDp">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="NOMBRES">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="APELLIDOS">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="CÉDULA" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>GENERO</label> <BR>
-                                        <input type="radio" name="genero" id="optionsRadios2" value="femenino"><label>F</label> 
-                                        <input type="radio" name="genero" id="optionsRadios2" value="masculino"><label>M</label> 
-                                    </div>
-                                    <div class="form-group">
-                                        <label>FECHA DE NACIMIENTO</label><input type="Date" class="form-control"> 
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="EDAD">
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="LUGAR DE NACIMIENTO">
-                                </div><!-- /input-group -->
-                                <!-- Columna 2 -->
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="ESTADO CIVIL">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="RAZA">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="ESTRATO SOCIAL">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="NACIONALIDAD">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="ESCOLARIDAD">
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="PROFESION"><br>
-                                    <div class="form-group">
-                                        <div class="col-lg-offset-3 col-lg-9 text-right footer">
-                                            <button class="btn  siguietne">Guardar</button>
-                                            <button class="btn siguietne">Siguiente</button>
-                                        </div>
-                                    </div>
-                                </div><!-- /input-group -->
-                            </div><!-- /.col-lg-6 -->
-                        </div><!-- /.row -->
+<link rel="stylesheet" href=" css/estilosreportes.css"/>
+<div class="col-lg-12 header" ng-include=" 'app/template/partial/menu.html'"></div>
 
-                        <!-- INFORMACION BASICA -->
-                        <div role="tabpanel" class="tab-pane fade" id="informacionB">
-                            <div class="row formularioDp">
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="ANTIGÜEDAD">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="CARGO">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="CENTRO DE TRABAJO">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="AREA / SECCION / LUGAR DE TRABAJO">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>FECHA DE INGRESO A LA EMPRESA</label><input type="Date" class="form-control"> 
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="TURNO DE TRABAJO"><br>
-                                </div><!-- /input-group -->
-                                <!-- Columna 2 -->
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="SALARIO">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="TIPO DE VINCULACION">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="ARL">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="EPS">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="AFP">
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="CONSENTIMIENTO INFORMADO"><br>
-                                    <div class="form-group">
-                                        <div class="col-lg-offset-3 col-lg-9 text-right footer">
-                                            <button class="btn  siguietne">Guardar</button>
-                                            <button class="btn siguietne">Siguiente</button>
-                                        </div>
-                                    </div>
-                                </div><!-- /input-group -->
-                            </div><!-- /.row -->
-                        </div>
-                        <!-- INFORMACION DE CONTACTO -->
-                        <div role="tabpanel" class="tab-pane fade" id="informacionC">
-                            <div class="row formularioDp">
-                                <div class=" form-horizontal col-lg-offset-3 col-lg-6">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="NOMBRES">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="EPS">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="AFP">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="CONSENTIMIENTO INFORMADO"><br>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-lg-offset-3 col-lg-9 text-right footer">
-                                            <button class="btn  siguietne">Guardar</button>
-                                            <button class="btn siguietne">Siguiente</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- INFORMACION FAMILIAR -->
-                        <div role="tabpanel" class="tab-pane fade" id="informacionF">
-                            <div class="row formularioDp">
-                                <div class=" form-horizontal col-lg-offset-3 col-lg-6">
-                                    <div>
-                                        <div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="NUMERO DE HIJOS">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="OTRAS PERSONAS A CARGO">
-                                            </div>
-                                            <div class="col-lg-offset-3 col-lg-9 text-right footer">
-                                                <button class="btn  siguietne">Finalizar</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<div class="container container-fluid contenedor">
+  <div class="col-lg-offset-3 col-lg-9 principal">
+    <div class="panel panel-default contenido">
+      <div class="panel-body">
+        <div>
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="datosP sinActive" ng-class="tabs[0].tab"><a ng-click="activeTab1()" role="tab" >DATOS PERSONALES</a></li>
+            <li role="presentation" class="datosP sinActive" ng-class="tabs[1].tab"><a ng-click="activeTab2()" role="tab">INFORMACION BASICA</a></li>
+            <li role="presentation" class="datosP sinActive" ng-class="tabs[2].tab"><a ng-click="activeTab3()" role="tab">INFORMACION DE CONTACTO</a></li>
+            <li role="presentation" class="datosP sinActive" ng-class="tabs[3].tab"><a ng-click="activeTab4()" role="tab">INFORMACION FAMILIAR</a></li>
+          </ul>
+          <!-- Tab panes -->
+          <!-- DATOS PERSONALES -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane my-element" ng-class="tabs[0].tab" ng-show="tabs[0].show" id="datosP">
+              <div class="row formularioDp">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="NOMBRES">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="APELLIDOS">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="CÉDULA" required>
+                  </div>
+                  <div class="form-group">
+                    <label>GENERO</label> <BR>
+                    <input type="radio" name="genero" id="optionsRadios2" value="femenino"><label>F</label> 
+                    <input type="radio" name="genero" id="optionsRadios2" value="masculino"><label>M</label> 
+                  </div>
+                  <div class="form-group">
+                    <label>FECHA DE NACIMIENTO</label><input type="Date" class="form-control"> 
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="EDAD">
+                  </div>
+                  <input type="text" class="form-control" placeholder="LUGAR DE NACIMIENTO">
+                </div><!-- /input-group -->
+                <!-- Columna 2 -->
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="ESTADO CIVIL">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="RAZA">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="ESTRATO SOCIAL">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="NACIONALIDAD">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="ESCOLARIDAD">
+                  </div>
+                  <input type="text" class="form-control" placeholder="PROFESION"><br>
+                  <div class="form-group">
+                    <div class="col-lg-offset-3 col-lg-9 text-right footer">
+                      <button class="btn  siguietne">Guardar</button>
+                      <button class="btn siguietne">Siguiente</button>
                     </div>
+                  </div>
+                </div><!-- /input-group -->
+              </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+
+            <!-- INFORMACION BASICA -->
+            <div role="tabpanel" class="tab-pane my-element" ng-class="tabs[1].tab" ng-show="tabs[1].show"id="informacionB">
+              <div class="row formularioDp">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="ANTIGÜEDAD">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="CARGO">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="CENTRO DE TRABAJO">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="AREA / SECCION / LUGAR DE TRABAJO">
+                  </div>
+                  <div class="form-group">
+                    <label>FECHA DE INGRESO A LA EMPRESA</label><input type="Date" class="form-control"> 
+                  </div>
+                  <input type="text" class="form-control" placeholder="TURNO DE TRABAJO"><br>
+                </div><!-- /input-group -->
+                <!-- Columna 2 -->
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="SALARIO">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="TIPO DE VINCULACION">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="ARL">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="EPS">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="AFP">
+                  </div>
+                  <input type="text" class="form-control" placeholder="CONSENTIMIENTO INFORMADO"><br>
+                  <div class="form-group">
+                    <div class="col-lg-offset-3 col-lg-9 text-right footer">
+                      <button class="btn  siguietne">Guardar</button>
+                      <button class="btn siguietne">Siguiente</button>
+                    </div>
+                  </div>
+                </div><!-- /input-group -->
+              </div><!-- /.row -->
+            </div>
+            <!-- INFORMACION DE CONTACTO -->
+            <div role="tabpanel" class="tab-pane my-element" ng-class="tabs[2].tab" ng-show="tabs[2].show" id="informacionC">
+              <div class="row formularioDp">
+                <div class=" form-horizontal col-lg-offset-3 col-lg-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="NOMBRES">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="EPS">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="AFP">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="CONSENTIMIENTO INFORMADO"><br>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-lg-offset-3 col-lg-9 text-right footer">
+                      <button class="btn  siguietne">Guardar</button>
+                      <button class="btn siguietne">Siguiente</button>
+                    </div>
+                  </div>
                 </div>
-            </div>    
+              </div>
+            </div>
+            <!-- INFORMACION FAMILIAR -->
+            <div role="tabpanel" class="tab-pane my-element" ng-class="tabs[3].tab" ng-show="tabs[3].show" id="informacionF">
+              <div class="row formularioDp">
+                <div class=" form-horizontal col-lg-offset-3 col-lg-6">
+                  <div>
+                    <div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="NUMERO DE HIJOS">
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="OTRAS PERSONAS A CARGO">
+                      </div>
+                      <div class="col-lg-offset-3 col-lg-9 text-right footer">
+                        <button class="btn  siguietne">Finalizar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-offset-3 col-lg-9 text-right footer">
-            <a href="#!/acercade"><button class="btn datosPersonales ">&copy; Acerca de...</button></a>
-            <button class="btn datosPersonales">Cerrar Sesión</button>
-        </div>
+      </div>    
     </div>
+    <div class="col-lg-offset-3 col-lg-9 text-right footer" ng-include=" 'app/template/partial/pie.html'"></div>
+  </div>
 </div>
