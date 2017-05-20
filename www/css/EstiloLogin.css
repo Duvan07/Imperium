@@ -1,0 +1,35 @@
+body{
+    background: #00a2ee;
+}
+
+.divLogin1{
+ background: white;
+ top: -20px;
+}
+
+.logoClinica{
+    width: 400px;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.btnIniciar{
+    background: #00a2ee;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.btnIniciar:hover{
+    background-color: #007bcf;
+    color: white;
+    font-weight: bolder;
+}
+
+.btnIniciar:focus{
+    background-color: #007bcf;
+    color: white;
+    font-weight: bolder;
+}
+

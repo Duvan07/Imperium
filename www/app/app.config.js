@@ -2,6 +2,10 @@ angular.module('imperium').config(['$routeProvider',
     function config($routeProvider) {
         $routeProvider.
                 when('/', {
+                    controller: 'loginController',
+                    templateUrl: 'app/template/login.html'
+                }).
+                when('/menuprincipal', {
                     controller: 'menuprincipalController',
                     templateUrl: 'app/template/menuprincipal.html'
                 }).
@@ -12,14 +16,14 @@ angular.module('imperium').config(['$routeProvider',
                 when('/acercade', {
                     controller: 'acercadeController',
                     templateUrl: 'app/template/acercade.html'
-                }). 
-                         when('/controlentradasalida', {
+                }).
+                when('/controlentradasalida', {
                     controller: 'controlentradasalidaController',
                     templateUrl: 'app/template/controlentradasalida.html'
-                }). 
-                         when('/reportes', {
+                }).
+                when('/reportes', {
                     controller: 'reportesController',
                     templateUrl: 'app/template/reportes.html'
-                }). 
+                }).
                 otherwise('/');
     }]);
