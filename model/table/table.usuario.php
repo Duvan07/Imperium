@@ -10,8 +10,18 @@ class usuario {
     private $alias;
     private $contrasena;
     private $correo;
+    private $rol;
+    
+    
+    function getRol() {
+        return $this->rol;
+    }
 
-    public function getId() {
+    function setRol($rol) {
+        $this->rol = $rol;
+    }
+
+        public function getId() {
         return $this->id;
     }
 
@@ -67,8 +77,8 @@ class usuario {
         $this->alias = $alias;
     }
 
-    public function setContrasena($contrasena) {
-        $this->contrasena = $contrasena;
+    public function setContrasena($contrasena, $hash) {
+        $this->contrasena = hash($hash, $contrasena, FALSE);
     }
 
     public function setCorreo($correo) {

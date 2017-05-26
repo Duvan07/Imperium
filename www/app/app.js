@@ -1,2 +1,2 @@
-angular.module('imperium',['ngRoute', 'ngResource']);
+angular.module('imperium',['ngRoute', 'ngResource', 'ngStorage', 'ngRoute.middleware']);
 

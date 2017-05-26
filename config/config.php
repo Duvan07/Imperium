@@ -1,7 +1,7 @@
 <?php
 
 $config = new myConfig();
-$config->setPath('E:/xampp/htdocs/imperium/');
+$config->setPath('C:\xampp\htdocs\imperium');
 
 $config->setDrive('pgsql');
 $config->setHost('localhost');

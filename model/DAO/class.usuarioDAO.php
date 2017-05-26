@@ -11,7 +11,7 @@ class usuarioDAO extends dataSource implements IUsuario {
     }
 
     public function insert(\usuario $usuario) {
-        $sql = 'INSERT INTO mer_usuario (usu_id, usu_cedula, usu_nombres, usu_apellidos, usu_telefono, usu_alias, usu_contraseña, usu_correo) VALUES (:id, :ced, :nom, :ape, :tel, :alias, :contra, :correo)';
+        $sql = 'INSERT INTO mer_usuario (usu_id, usu_cedula, usu_nombres, usu_apellidos, usu_telefono, usu_alias, usu_contraseña, usu_correo, usu_rol) VALUES (:id, :ced, :nom, :ape, :tel, :alias, :contra, :correo, rol:)';
         $params = array(
             ':id' => $usuario->getId(),
             ':ced' => $usuario->getCedula(),
@@ -20,7 +20,8 @@ class usuarioDAO extends dataSource implements IUsuario {
             ':tel' => $usuario->getTelefono(),
             ':alias' => $usuario->getAlias(),
             ':contra' => $usuario->getContrasena(),
-            ':correo' => $usuario->getCorreo()
+            ':correo' => $usuario->getCorreo(),
+            ':rol' => $usuario->getRol()
         );
         return $this->execute($sql, $params);
     }
@@ -31,7 +32,7 @@ class usuarioDAO extends dataSource implements IUsuario {
     }
 
     public function selectById($id) {
-        $sql = 'SELECT usu_id, usu_cedula, usu_nombres, usu_apellidos, usu_telefono, usu_alias, usu_contraseña, usu_correo FROM mer_usuario WHERE usu_id = :id';
+        $sql = 'SELECT usu_id, usu_cedula, usu_nombres, usu_apellidos, usu_telefono, usu_alias, usu_contraseña, usu_correo, usu_rol FROM mer_usuario WHERE usu_id = :id';
         $params = array(
             ':id' => $id
         );
@@ -39,7 +40,7 @@ class usuarioDAO extends dataSource implements IUsuario {
     }
 
     public function update(\usuario $usuario) {
-        $sql = 'UPDATE mer_usuario SET usu_id = :id, usu_cedula = :ced, usu_nombres = :nom, usu_apellidos = :ape, usu_telefono = :tel, usu_alias = :alias, usu_contrasena = :contra, usu_correo :correo WHERE id = :id';
+        $sql = 'UPDATE mer_usuario SET usu_id = :id, usu_cedula = :ced, usu_nombres = :nom, usu_apellidos = :ape, usu_telefono = :tel, usu_alias = :alias, usu_contrasena = :contra, usu_correo = :correo, usu_rol = :rol WHERE id = :id';
         $params = array(
             ':id' => $usuario->getId(),
             ':ced' => $usuario->getCedula(),
@@ -48,7 +49,8 @@ class usuarioDAO extends dataSource implements IUsuario {
             ':tel' => $usuario->getTelefono(),
             ':alias' => $usuario->getAlias(),
             ':contra' => $usuario->getContrasena(),
-            ':correo' => $usuario->getCorreo()
+            ':correo' => $usuario->getCorreo(),
+            ':rol' => $usuario->getRol()
         );
         return $this->execute($sql, $params);
     }
