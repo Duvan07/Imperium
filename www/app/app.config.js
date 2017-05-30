@@ -1,5 +1,5 @@
-angular.module('imperium').config(['$routeProvider',
-    function config($routeProvider) {
+angular.module('imperium').config(['$routeProvider', '$httpProvider', function config($routeProvider, $httpProvider) {
+        $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
         $routeProvider.
                 when('/', {
                     controller: 'loginController',

@@ -12,6 +12,7 @@ angular.module('imperium').controller('crearusuarioController', ['$scope', 'regi
         };
 
         $scope.usuarioRegistrado = false;
+//        $scope.usuarios = [];
 
         $scope.registarU = function () {
             registarUsuario.registrarusu($scope.dataRegistrarUsuario).then(function succesCallback(response) {

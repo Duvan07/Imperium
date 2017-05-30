@@ -8,7 +8,6 @@
                 <div class="page-header">
                     <h1>Nuevo usuario</h1>
                 </div>
-
                 <div class="row">
                     <form ng-submit="registarU()" class="form-horizontal col-lg-offset-3 col-lg-6">
                         <div class="form-group">
@@ -43,10 +42,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <select ng-model="dataRegistrarUsuario.rol" class="form-control" required>
-                                <option>ADMINISTRADOR</option>
-                                <option>INVITADO</option>
-
+                            <select ng-model="dataRegistrarUsuario.rol" class="form-control input-sm" arial-label required>
+                                <option value="1">ADMINISTRADOR</option>
+                                <option value="2">INVITADO</option>
                             </select>
                         </div>
                         <!-- crear panel -->
@@ -61,7 +59,6 @@
                                 <input ng-model="dataRegistrarUsuario.contrasena" type="text" class="form-control" id="inputPassword3" placeholder="Contraseña" required>
                             </div>
                         </div>
-
                         <div class="form-group text-right">
                             <button type="submit" class="btn datosPersonales">Guardar</button>
                             <button type="button" class="btn datosPersonales">Cancelar</button>
@@ -72,7 +69,6 @@
                         </div>
                     </form>
                 </div>
-
             </div>
         </div>
         <div class="col-lg-offset-3 col-lg-9 text-right footer" ng-include=" 'app/template/partial/pie.html'"></div>

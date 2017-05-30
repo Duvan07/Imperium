@@ -1,21 +1,21 @@
 <?php
 
-class registarUsuario extends controllerExtended {
+class registrarUsuario extends controllerExtended {
 
     public function main(\request $request) {
-
         try {
+
             $this->loadTableUsuario();
 
-            $usuario = new usuario();
+            $usuario = new usuario ();
             $usuario->setCedula($request->getParam('cedula'));
             $usuario->setNombres($request->getParam('nombres'));
             $usuario->setApellidos($request->getParam('apellidos'));
             $usuario->setTelefono($request->getParam('telefono'));
             $usuario->setAlias($request->getParam('alias'));
-            $usuario->setContrasena($request->getParam('contrasena'), $this->getConfig()->getHash());
+            $usuario->setRol_id($request->getParam('rol'));
             $usuario->setCorreo($request->getParam('correo'));
-            $usuario->setRol($request->getParam('rol'));
+            $usuario->setContrasena($request->getParam('contrasena'), $this->getConfig()->getHash());
 
             $usuarioDAO = new usuarioDAOExt($this->getConfig());
             $respuesta1 = $usuarioDAO->insert($usuario);
@@ -25,9 +25,9 @@ class registarUsuario extends controllerExtended {
             );
 
             $this->setParam('rsp', $respuesta2);
-            $this->getView('imprimirJson');
-        } catch (Exception $ex) {
-            echo $ex->getMessage();
+            $this->setView('json');
+        } catch (Exception $exc) {
+            echo $exc->getMessage();
         }
     }
 
@@ -35,7 +35,7 @@ class registarUsuario extends controllerExtended {
         require $this->getConfig()->getPath() . 'model/table/table.usuario.php';
         require $this->getConfig()->getPath() . 'model/interface/interface.usuario.php';
         require $this->getConfig()->getPath() . 'model/DAO/class.usuarioDAO.php';
-        require $this->getConfig()->getPath() . 'model/extended/class.usuarioDAOExt';
+        require $this->getConfig()->getPath() . 'model/extended/class.usuarioDAOExt.php';
     }
 
 }

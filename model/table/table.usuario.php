@@ -10,15 +10,17 @@ class usuario {
     private $alias;
     private $contrasena;
     private $correo;
-    private $rol;
+    private $rol_id;
+
     
     
-    function getRol() {
-        return $this->rol;
+    
+    function getRol_id() {
+        return $this->rol_id;
     }
 
-    function setRol($rol) {
-        $this->rol = $rol;
+    function setRol_id($rol_id) {
+        $this->rol_id = $rol_id;
     }
 
         public function getId() {

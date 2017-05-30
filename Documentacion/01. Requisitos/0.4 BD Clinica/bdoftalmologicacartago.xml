@@ -185,6 +185,9 @@
       <Cl au="0" df="" nm="rol_id" nu="0">
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
+      <Cl au="0" df="" nm="rol_usu" nu="0">
+        <DT arr="0" ds="VarChar" en="" id="12" ln="20" sc="null" sg="1" un="0"/>
+      </Cl>
       <Fk deAc="1" nm="fk_NuevoUsuario_Rol" prLkCl="rol_id" upAc="1">
         <PrTb mn="0" nm="mer_rol" oe="1" sch="public" zr="0"/>
         <CdTb mn="1" nm="mer_usuario" oe="0" sch="public" zr="1"/>

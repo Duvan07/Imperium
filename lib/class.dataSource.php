@@ -72,7 +72,7 @@ class dataSource {
       $stmt = $this->getConection()->prepare($sql);
       $stmt->execute($params);
       return $stmt->rowCount();
-    } catch (PDOException $ex) {
+    } catch (PDOException $exc) {
       throw new Exception($exc->getMessage(), $exc->getCode(), $exc->getPrevious());
     }
   }
