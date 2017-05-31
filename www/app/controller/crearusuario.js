@@ -10,7 +10,7 @@ angular.module('imperium').controller('crearusuarioController', ['$scope', 'regi
             correo: '',
             rol: ''
         };
-
+        $scope.tipo = 'password';
         $scope.usuarioRegistrado = false;
 //        $scope.usuarios = [];
 
