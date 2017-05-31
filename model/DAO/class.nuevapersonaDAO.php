@@ -11,14 +11,13 @@ class nuevapersonaDAO extends dataSource implements INuevapersona {
   }
 
   public function insert(\nuevapersona $mer_persona) {
-    $sql = 'INSERT INTO mer_persona (per_id, per_cedula, per_nombres, per_apellidos, '
+    $sql = 'INSERT INTO mer_persona (per_cedula, per_nombres, per_apellidos, '
             . 'per_genero, per_fenacimiento, per_edad, per_lugarnacimiento,per_nacionalidad,per_lugarresidencia,per_direccionresidencia,'
             . 'per_notelefono,per_correo,per_fecingresoempresa,per_antiguedad,per_cargo,per_centrotrabajo,per_area,per_turno,per_salario,'
-            . 'per_tipovinculacion,per_arl,per_eps,per_afp,per_escolaridad,per_profesion,per_estadocivi,per_raza,per_nohijos,per_otraperacargo,'
-            . 'per_estratosocial,per_concentimientoformado) VALUES (:id, :ced, :nom, :ape, :gen, :fen, :edad, :lun, :nac, :lur, :dir, :tel,'
+            . 'per_tipovinculacion,per_arl,per_eps,per_afp,per_escolaridad,per_profesion,per_estadocivi,per_raza,per_nohijos,per_otrasperacargo,'
+            . 'per_estratosocial,per_conseninformado) VALUES (:ced, :nom, :ape, :gen, :fen, :edad, :lun, :nac, :lur, :dir, :tel,'
             . ' :correo,:feingre,:anti,:cargo, :centro ,:area, :tur, :sal , :tiv, :arl, :eps, :afp, :esc, :profe, :estadoc, :raza, :nohijos, :otp, :estrato, :consent)';
     $params = array(
-        ':id' => $mer_persona->getId(),
         ':ced' => $mer_persona->getCedula(),
         ':nom' => $mer_persona->getNombres(),
         ':ape' => $mer_persona->getApellidos(),

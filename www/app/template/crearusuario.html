@@ -1,76 +1,76 @@
 <link rel="stylesheet" href="css/Estilo.css">
 <div class="col-lg-12 header" ng-include=" 'app/template/partial/menu.html'"></div>
 <div class="container container-fluid contenedor">
-    <div class="col-lg-offset-3 col-lg-9 principal">
-        <div class="panel panel-default contenido">
-            <div class="panel-body">
+  <div class="col-lg-offset-3 col-lg-9 principal">
+    <div class="panel panel-default contenido">
+      <div class="panel-body">
 
-                <div class="page-header">
-                    <h1>Nuevo usuario</h1>
-                </div>
-                <div class="row">
-                    <form ng-submit="registarU()" class="form-horizontal col-lg-offset-3 col-lg-6">
-                        <div class="form-group">
-                            <!-- columna 1 -->
-                            <div>
-                                <input ng-model="dataRegistrarUsuario.nombres" type="text" class="form-control" id="inputEmail3" placeholder="Nombres" required>
-                            </div>
-                        </div>
-                        <!-- columna 2 -->
-                        <div class="form-group">
-                            <div>
-                                <input ng-model="dataRegistrarUsuario.apellidos" type="text" class="form-control" id="inputPassword3" placeholder="Apellidos" required>
-                            </div>
-                        </div>
-                        <!-- crear panel -->
-                        <div class="form-group">
-                            <!-- columna 3 -->
-                            <div>
-                                <input ng-model="dataRegistrarUsuario.cedula" type="number" class="form-control" id="inputEmail3" placeholder="Cédula" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div>
-                                <input ng-model="dataRegistrarUsuario.telefono" type="number" class="form-control" id="inputPassword3" placeholder="Telefono" required>
-                            </div>
-                        </div>
-                        <!-- crear panel -->
-                        <!-- columna 4 -->
-                        <div class="form-group">
-                            <div>
-                                <input ng-model="dataRegistrarUsuario.correo" type="text" class="form-control" id="inputEmail3" placeholder="Correo" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <select ng-model="dataRegistrarUsuario.rol" class="form-control input-sm" arial-label required>
-                                <option value="1">ADMINISTRADOR</option>
-                                <option value="2">INVITADO</option>
-                            </select>
-                        </div>
-                        <!-- crear panel -->
-                        <div class="form-group">
-                            <!-- columna5 -->
-                            <div>
-                                <input ng-model="dataRegistrarUsuario.alias" type="text" class="form-control" id="inputEmail3" placeholder="Alias" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div>
-                                <input ng-model="dataRegistrarUsuario.contrasena" type="text" class="form-control" id="inputPassword3" placeholder="Contraseña" required>
-                            </div>
-                        </div>
-                        <div class="form-group text-right">
-                            <button type="submit" class="btn datosPersonales">Guardar</button>
-                            <button type="button" class="btn datosPersonales">Cancelar</button>
-                        </div>
-
-                        <div class="alert alert-success" ng-show="usuarioRegistrado">
-                            <center> Usuario Registrado </center>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <div class="page-header">
+          <h1>Nuevo usuario</h1>
         </div>
-        <div class="col-lg-offset-3 col-lg-9 text-right footer" ng-include=" 'app/template/partial/pie.html'"></div>
-    </div>  
+        <div class="row">
+          <form ng-submit="registarU()" class="form-horizontal col-lg-offset-3 col-lg-6">
+            <div class="form-group">
+              <!-- columna 1 -->
+              <div>
+                <input ng-model="dataRegistrarUsuario.nombres" type="text" class="form-control" id="inputEmail3" placeholder="Nombres" required>
+              </div>
+            </div>
+            <!-- columna 2 -->
+            <div class="form-group">
+              <div>
+                <input ng-model="dataRegistrarUsuario.apellidos" type="text" class="form-control" id="inputPassword3" placeholder="Apellidos" required>
+              </div>
+            </div>
+            <!-- crear panel -->
+            <div class="form-group">
+              <!-- columna 3 -->
+              <div>
+                <input ng-model="dataRegistrarUsuario.cedula" type="number" class="form-control" id="inputEmail3" placeholder="Cédula" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div>
+                <input ng-model="dataRegistrarUsuario.telefono" type="number" class="form-control" id="inputPassword3" placeholder="Telefono" required>
+              </div>
+            </div>
+            <!-- crear panel -->
+            <!-- columna 4 -->
+            <div class="form-group">
+              <div>
+                <input ng-model="dataRegistrarUsuario.correo" type="text" class="form-control" id="inputEmail3" placeholder="Correo" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <select ng-model="dataRegistrarUsuario.rol" class="form-control input-sm" arial-label required>
+                <option value="1">ADMINISTRADOR</option>
+                <option value="2">INVITADO</option>
+              </select>
+            </div>
+            <!-- crear panel -->
+            <div class="form-group">
+              <!-- columna5 -->
+              <div>
+                <input ng-model="dataRegistrarUsuario.alias" type="text" class="form-control" id="inputEmail3" placeholder="Alias" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div>
+                <input ng-model="dataRegistrarUsuario.contrasena" type="text" class="form-control" id="inputPassword3" placeholder="Contraseña" required>
+              </div>
+            </div>
+            <div class="form-group text-right">
+              <button type="submit" class="btn datosPersonales">Guardar</button>
+              <button type="button" class="btn datosPersonales">Cancelar</button>
+            </div>
+
+            <div class="alert alert-success" ng-show="usuarioRegistrado">
+              <center> Usuario Registrado </center>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-offset-3 col-lg-9 text-right footer" ng-include=" 'app/template/partial/pie.html'"></div>
+  </div>  
 </div>

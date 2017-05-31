@@ -16,54 +16,52 @@
           </ul>
           <!-- Tab panes -->
           <!-- DATOS PERSONALES -->
-          <div class="tab-content">
+          <form ng-submit="registarP()" class="tab-content">
             <div role="tabpanel" class="tab-pane my-element" ng-class="tabs[0].tab" ng-show="tabs[0].show" id="datosP">
               <div class="row formularioDp">
                 <div class="col-lg-6">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="NOMBRES">
-
+                  <div  class="form-group">
+                    <input ng-model="RegistrarPersona.nombre" type="text" class="form-control" placeholder="NOMBRES" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="APELLIDOS">
+                    <input ng-model="RegistrarPersona.apellido" type="text" class="form-control" placeholder="APELLIDOS" required>
                   </div>
                   <div class="form-group">
-                    <input type="number" class="form-control" placeholder="CÉDULA" required>
+                    <input ng-model="RegistrarPersona.cedula" type="number" class="form-control" placeholder="CÉDULA" required>
                   </div>
                   <div class="form-group">
                     <label>GENERO</label> <BR>
-                    <input type="radio" name="genero" id="optionsRadios2" value="femenino"><label>F</label> 
-                    <input type="radio" name="genero" id="optionsRadios2" value="masculino"><label>M</label> 
+                    <input ng-model="RegistrarPersona.genero" type="radio" name="genero" id="optionsRadios2" value="f" required=""><label>F</label> 
+                    <input ng-model="RegistrarPersona.genero" type="radio" name="genero" id="optionsRadios2" value="m" required=""><label>M</label> 
+                  </div>
+                  <div  class="form-group">
+                    <label>FECHA DE NACIMIENTO</label><input ng-model="RegistrarPersona.fechanaci" type="Date" class="form-control" required> 
                   </div>
                   <div class="form-group">
-                    <label>FECHA DE NACIMIENTO</label><input type="Date" class="form-control"> 
+                    <input ng-model="RegistrarPersona.edad" type="text" class="form-control" placeholder="EDAD" required>
                   </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="EDAD">
-                  </div>
-                  <input type="text" class="form-control" placeholder="LUGAR DE NACIMIENTO">
+                  <input ng-model="RegistrarPersona.lugarnaci" type="text" class="form-control" placeholder="LUGAR DE NACIMIENTO" required>
                 </div><!-- /input-group -->
                 <!-- Columna 2 -->
                 <div class="col-lg-6">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="ESTADO CIVIL">
+                  <div  class="form-group">
+                    <input ng-model="RegistrarPersona.estadocivil" type="text" class="form-control" placeholder="ESTADO CIVIL" required>
+                  </div>
+                  <div  class="form-group">
+                    <input ng-model="RegistrarPersona.raza" type="text" class="form-control" placeholder="RAZA" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="RAZA">
+                    <input ng-model="RegistrarPersona.estratosocial" type="text" class="form-control" placeholder="ESTRATO SOCIAL" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="ESTRATO SOCIAL">
+                    <input ng-model="RegistrarPersona.nacionalidad" type="text" class="form-control" placeholder="NACIONALIDAD" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="NACIONALIDAD">
+                    <input ng-model="RegistrarPersona.escolaridad" type="text" class="form-control" placeholder="ESCOLARIDAD" required>
                   </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="ESCOLARIDAD">
-                  </div>
-                  <input type="text" class="form-control" placeholder="PROFESION"><br>
+                  <input ng-model="RegistrarPersona.profesion" type="text" class="form-control" placeholder="PROFESION" required><br>
                   <div class="form-group">
                     <div class="col-lg-offset-3 col-lg-9 text-right footer">
-                      <button class="btn  siguietne">Guardar</button>
                       <button class="btn siguietne">Siguiente</button>
                     </div>
                   </div>
@@ -76,43 +74,42 @@
               <div class="row formularioDp">
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="ANTIGÜEDAD">
+                    <input ng-model="RegistrarPersona.antiguedad" type="text" class="form-control" placeholder="ANTIGÜEDAD" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="CARGO">
+                    <input ng-model="RegistrarPersona.cargo" type="text" class="form-control" placeholder="CARGO" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="CENTRO DE TRABAJO">
+                    <input ng-model="RegistrarPersona.centrotrabajo" type="text" class="form-control" placeholder="CENTRO DE TRABAJO" required>
+                  </div>
+                  <div  class="form-group">
+                    <input ng-model="RegistrarPersona.area" type="text" class="form-control" placeholder="AREA / SECCION / LUGAR DE TRABAJO" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="AREA / SECCION / LUGAR DE TRABAJO">
+                    <label>FECHA DE INGRESO A LA EMPRESA</label><input ng-model="RegistrarPersona.fechaingreso" type="Date" class="form-control"> 
                   </div>
-                  <div class="form-group">
-                    <label>FECHA DE INGRESO A LA EMPRESA</label><input type="Date" class="form-control"> 
-                  </div>
-                  <input type="text" class="form-control" placeholder="TURNO DE TRABAJO"><br>
+                  <input ng-model="RegistrarPersona.turnotrabajo" type="text" class="form-control" placeholder="TURNO DE TRABAJO" required><br>
                 </div><!-- /input-group -->
                 <!-- Columna 2 -->
                 <div class="col-lg-6">
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="SALARIO">
+                    <input ng-model="RegistrarPersona.salario" type="text" class="form-control" placeholder="SALARIO" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="TIPO DE VINCULACION">
+                    <input ng-model="RegistrarPersona.tipovinculacion" type="text" class="form-control" placeholder="TIPO DE VINCULACION" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="ARL">
+                    <input ng-model="RegistrarPersona.arl" type="text" class="form-control" placeholder="ARL" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="EPS">
+                    <input ng-model="RegistrarPersona.eps" type="text" class="form-control" placeholder="EPS" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="AFP">
+                    <input ng-model="RegistrarPersona.afp" type="text" class="form-control" placeholder="AFP" required>
                   </div>
-                  <input type="text" class="form-control" placeholder="CONSENTIMIENTO INFORMADO"><br>
+                  <input ng-model="RegistrarPersona.consentimiento" type="text" class="form-control" placeholder="CONSENTIMIENTO INFORMADO" required><br>
                   <div class="form-group">
                     <div class="col-lg-offset-3 col-lg-9 text-right footer">
-                      <button class="btn  siguietne">Guardar</button>
                       <button class="btn siguietne">Siguiente</button>
                     </div>
                   </div>
@@ -124,20 +121,19 @@
               <div class="row formularioDp">
                 <div class=" form-horizontal col-lg-offset-3 col-lg-6">
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="NOMBRES">
+                    <input ng-model="RegistrarPersona.lugarresidencia" type="text" class="form-control" placeholder="LUGAR DE RESIDENCIA" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="EPS">
+                    <input ng-model="RegistrarPersona.direccionresidencia" type="text" class="form-control" placeholder="DIRECCION DE RESIDENCIA" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="AFP">
+                    <input ng-model="RegistrarPersona.telefono" type="text" class="form-control" placeholder="NUMERO DE TELEFONO" required>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" placeholder="CONSENTIMIENTO INFORMADO"><br>
+                    <input ng-model="RegistrarPersona.correo" type="text" class="form-control" placeholder="CORREO" required><br>
                   </div>
                   <div class="form-group">
                     <div class="col-lg-offset-3 col-lg-9 text-right footer">
-                      <button class="btn  siguietne">Guardar</button>
                       <button class="btn siguietne">Siguiente</button>
                     </div>
                   </div>
@@ -151,20 +147,21 @@
                   <div>
                     <div>
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="NUMERO DE HIJOS">
+                        <input ng-model="RegistrarPersona.numerohijos" type="text" class="form-control" placeholder="NUMERO DE HIJOS" required>
                       </div>
                       <div class="form-group">
-                        <input type="text" class="form-control" placeholder="OTRAS PERSONAS A CARGO">
+                        <input ng-model="RegistrarPersona.personasacargo" type="text" class="form-control" placeholder="OTRAS PERSONAS A CARGO" required>
                       </div>
                       <div class="col-lg-offset-3 col-lg-9 text-right footer">
-                        <button class="btn  siguietne">Finalizar</button>
+                        <button type="submit" class="btn  siguietne">Guardar</button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </form>
+
         </div>
       </div>    
     </div>

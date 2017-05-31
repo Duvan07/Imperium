@@ -24,7 +24,7 @@ angular.module('imperium').controller('crearusuarioController', ['$scope', 'regi
 
                 } else {
                     $scope.usuarioRegistrado = true;
-                    $scope.dataRegistrarUsuario = '';
+                    $scope.dataRegistrarUsuario = {};
 
                 }
             }, function errorCallback(response) {

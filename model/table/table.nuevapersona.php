@@ -1,6 +1,7 @@
 <?php
 
 class nuevapersona {
+
   private $id;
   private $cedula;
   private $nombres;
@@ -33,7 +34,7 @@ class nuevapersona {
   private $otrasperacargo;
   private $estratosocial;
   private $concentimientoformado;
-  
+
   function getId() {
     return $this->id;
   }
@@ -289,6 +290,5 @@ class nuevapersona {
   function setConcentimientoformado($concentimientoformado) {
     $this->concentimientoformado = $concentimientoformado;
   }
-
 
 }
