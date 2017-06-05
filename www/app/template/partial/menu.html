@@ -1,18 +1,18 @@
 <div class="container container-fluid">
-  <div class="panel panel-default menu col-lg-3">
-    <div class="panel-body list-group">
-      <a href="#!/crearusuario" class="list-group-item botonMenu"><div class="centrarTexto">AGREGAR NUEVO USUARIO</div></a>
-      <a href="#!/menuprincipal" class="list-group-item botonMenu"><div class="centrarTexto">REGISTRAR NUEVA PERSONA</div></a>
-      <a href="#!/controlentradasalida" class="list-group-item botonMenu"><div style="text-align: center;">CONTROL DE ENTRADA Y SALIDA DEL PERSONAL</div></a>
-      <a href="#!/reportes" class="list-group-item botonMenu "><div class="centrarTexto">REPORTES DEL PERSONAL</div></a>
+    <div class="panel panel-default menu col-lg-3">
+        <div class="panel-body list-group">
+            <a ng-show="(rol == Administrador) ? true : false" href="#!/crearusuario" class="list-group-item botonMenu"><div class="centrarTexto">AGREGAR NUEVO USUARIO</div></a>
+            <a ng-show="(rol == Administrador) ? true : false" href="#!/menuprincipal" class="list-group-item botonMenu"><div class="centrarTexto">REGISTRAR NUEVA PERSONA</div></a>
+            <a href="#!/controlentradasalida" class="list-group-item botonMenu"><div style="text-align: center;">CONTROL DE ENTRADA Y SALIDA DEL PERSONAL</div></a>
+            <a ng-show="(rol == Administrador) ? true : false" href="#!/reportes" class="list-group-item botonMenu "><div class="centrarTexto">REPORTES DEL PERSONAL</div></a>
+        </div>
     </div>
-  </div>
-  <form class="form-inline frmSearch text-right col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control masLargo" placeholder="Buscar por...">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-      </span>
-    </div>
-  </form>
+    <form class="form-inline frmSearch text-right col-lg-6">
+        <div class="input-group">
+            <input type="text" class="form-control masLargo" placeholder="Buscar por...">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+            </span>
+        </div>
+    </form>
 </div>

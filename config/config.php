@@ -1,7 +1,7 @@
 <?php
 
 $config = new myConfig();
-$config->setPath('C:\xampp\htdocs\imperium/');
+$config->setPath('C:/xampp/htdocs/Imperium/');
 
 $config->setDrive('pgsql');
 $config->setHost('localhost');
@@ -12,3 +12,5 @@ $config->setDbname('dbClinica');
 $config->setHash('md5');
 
 $config->setUrl('http://localhost/imperium/www/');
+
+

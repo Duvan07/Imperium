@@ -8,14 +8,27 @@
                         <div class="panel panel">
                             <div class="panel-heading"><img class="logoClinica" src="img/d.png" alt=""/></div>
                             <div class="panel-body">
-                                <form action="checklogin.php" method="post" >
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="USUARIO" required>
+                                <form ng-submit="submit()">
+
+                                    <!--<form action="checklogin.php" method="post" >-->
+                                    <div class="form-group fr">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i>
+                                            </span>
+                                            <input ng-model="datos.usuario" type="text" class="form-control" id="usuario" placeholder="USUARIO" required>
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" placeholder="CONTRASEÑA" required>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-key"></i>
+                                            </span>
+                                            <input ng-model="datos.contrasena" type="password" class="form-control" id="contrasena" placeholder="CONTRASEÑA" required>
+                                        </div>
                                     </div>
-                                    <a href="#!/menuprincipal"><button type="button" class="btn btn-block btnIniciar">Iniciar Sesión</button></a> 
+                                    <div class="alert-danger" ng-show="usuarioErroneo">
+                                        USUARIO INVALIDO
+                                    </div>
+                                    <button type="submit" class="btn btn-block btnIniciar">Iniciar Sesión</button>
                                 </form>
                             </div>
                         </div>

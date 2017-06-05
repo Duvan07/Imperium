@@ -17,5 +17,17 @@ class usuarioDAOExt extends usuarioDAO {
         );
         return $this->execute($sql, $params);
     }
+    
+    
+     public function buscar($usuario, $contrasena) {
+        $sql = 'SELECT usu_id, usu_cedula, usu_nombres, usu_apellidos, usu_telefono, usu_alias, usu_contrasena, usu_correo, rol_id FROM mer_usuario WHERE usu_alias = :alias AND usu_contrasena = :password';
+        $params = array(
+            ':alias' => $usuario,
+            ':password' => $contrasena,
+        );
+
+        return $this->query($sql, $params);
+    }
+
 
 }

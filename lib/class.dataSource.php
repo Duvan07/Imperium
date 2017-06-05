@@ -58,7 +58,6 @@ class dataSource {
       return $stmt->fetchAll();
     } catch (PDOException $exc) {
       echo $exc->getMessage();
-      exit();
       throw new Exception($exc->getMessage(), $exc->getCode(), $exc->getPrevious());
     }
   }
@@ -76,7 +75,6 @@ class dataSource {
       return $stmt->rowCount();
     } catch (PDOException $exc) {
       echo $exc->getMessage();
-      exit();
       throw new Exception($exc->getMessage(), $exc->getCode(), $exc->getPrevious());
     }
   }
