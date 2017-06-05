@@ -28,7 +28,7 @@ angular.module('imperium').controller('crearusuarioController', ['$scope', 'regi
 
                 }
             }, function errorCallback(response) {
-                console.error(response);
+                console.log(response);
             });
 
         };

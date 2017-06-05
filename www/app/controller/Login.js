@@ -30,9 +30,10 @@ angular.module('imperium').controller('loginController', ['$scope', 'securitySer
                 // console.log(response);
                 $scope.usuarioErroneo = false;
                 if (response.data.codigo == 500) {
+                    
+                } else {
                     $scope.usuarioErroneo = true;
                     $scope.datos = {};
-                } else {
                     $sessionStorage.usuario = response.data.usuario[0];
                     if ($sessionStorage.usuario.rol_id == rolAdmin){
                         $location.path('/menuprincipal');

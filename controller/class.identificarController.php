@@ -11,12 +11,12 @@ class identificar extends controllerExtended {
 
             $usuarioDAO = new usuarioDAOExt($this->getConfig());
             $respuesta1 = $usuarioDAO->buscar($user, $password);
-            $rsp = array(
+            $rsp2 = array(
                 'code' => (count($respuesta1) > 0) ? 200 : 500,
                 'usuario' => $respuesta1
             );
 
-            $this->setParam('json', $rsp);
+            $this->setParam('rsp', $rsp2);
             $this->setView('json');
         } catch (Exception $exc) {
             echo $exc->getMessage();

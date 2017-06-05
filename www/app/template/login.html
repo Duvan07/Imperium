@@ -25,8 +25,9 @@
                                             <input ng-model="datos.contrasena" type="password" class="form-control" id="contrasena" placeholder="CONTRASEÑA" required>
                                         </div>
                                     </div>
-                                    <div class="alert-danger" ng-show="usuarioErroneo">
-                                        USUARIO INVALIDO
+                                    <div class="alert alert-danger" ng-show="usuarioErroneo">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Closed"><span aria-hidden="true">&times;</span></button>
+                                        <center> Usuario Invalido </center>
                                     </div>
                                     <button type="submit" class="btn btn-block btnIniciar">Iniciar Sesión</button>
                                 </form>
