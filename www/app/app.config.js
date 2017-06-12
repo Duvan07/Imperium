@@ -14,7 +14,7 @@ angular.module('imperium').config(['$middlewareProvider', function middlewarePro
                     middlewareComprobarNoTenerSession(this, $sessionStorage);
                 }],
             'usuario': ['$sessionStorage', 'Administrador', function usuario($sessionStorage, Administrador) {
-                    middlewareusuario(this, $sessionStorage, Administrador); 
+                    middlewareusuario(this, $sessionStorage, Administrador);
                 }]
         });
     }]);
@@ -39,7 +39,8 @@ angular.module('imperium').config(['$routeProvider', '$httpProvider', function c
                 }).
                 when('/acercade', {
                     controller: 'acercadeController',
-                    templateUrl: 'app/template/acercade.html'
+                    templateUrl: 'app/template/acercade.html',
+                    middleware: ['comprobarSession']
                 }).
                 when('/controlentradasalida', {
                     controller: 'controlentradasalidaController',
@@ -56,5 +57,11 @@ angular.module('imperium').config(['$routeProvider', '$httpProvider', function c
                     template: '<p>Cerrando Sesión...</p>',
                     middleware: ['comprobarSession']
                 }).
+                when('/buscar', {
+                    controller: 'buscarController',
+                    templateUrl: 'app/template/buscarunapersona.html',
+                    middleware: ['comprobarSession']
+                }).
                 otherwise('/');
     }]);
+

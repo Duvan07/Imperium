@@ -1,6 +1,26 @@
 <link rel="stylesheet" href="css/Estilo.css">
 <link rel="stylesheet" href=" css/estilosreportes.css"/>
-<div class="col-lg-12 header" ng-include=" 'app/template/partial/menu.html'"></div>
+
+<div class="col-lg-12 header">
+    <div class="container container-fluid">
+        <div class="panel panel-default menu col-lg-3">
+            <div class="panel-body list-group">
+                <a ng-show="(rol == Administrador) ? true : false" href="#!/crearusuario" class="list-group-item botonMenu"><div class="centrarTexto">AGREGAR NUEVO USUARIO</div></a>
+                <a ng-show="(rol == Administrador) ? true : false" href="#!/menuprincipal" class="list-group-item botonMenu"><div class="centrarTexto">REGISTRAR NUEVA PERSONA</div></a>
+                <a href="#!/controlentradasalida" class="list-group-item botonMenu"><div style="text-align: center;">CONTROL DE ENTRADA Y SALIDA DEL PERSONAL</div></a>
+                <a ng-show="(rol == Administrador) ? true : false" href="#!/reportes" class="list-group-item botonMenu "><div class="centrarTexto">REPORTES DEL PERSONAL</div></a>
+            </div>
+        </div>
+        <form ng-submit="buscar()" class="form-inline frmSearch text-right col-lg-6">
+            <div class="input-group">
+                <input ng-model="bus.texto" type="text" class="form-control masLargo" placeholder="Buscar por..." required>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
 
 <div class="container container-fluid contenedor">
   <div class="col-lg-offset-3 col-lg-9 principal">
@@ -35,7 +55,7 @@
                     <input ng-model="RegistrarPersona.genero" type="radio" name="genero" id="optionsRadios2" value="m" required=""><label>M</label> 
                   </div>
                   <div  class="form-group">
-                    <label>FECHA DE NACIMIENTO</label><input ng-model="RegistrarPersona.fechanaci" type="Date" class="form-control" required> 
+                    <label>FECHA DE NACIMIENTO</label><input ng-model="RegistrarPersona.fechanaci" type="date" class="form-control" required> 
                   </div>
                   <div class="form-group">
                     <input ng-model="RegistrarPersona.edad" type="text" class="form-control" placeholder="EDAD" required>
@@ -86,7 +106,7 @@
                     <input ng-model="RegistrarPersona.area" type="text" class="form-control" placeholder="AREA / SECCION / LUGAR DE TRABAJO" required>
                   </div>
                   <div class="form-group">
-                    <label>FECHA DE INGRESO A LA EMPRESA</label><input ng-model="RegistrarPersona.fechaingreso" type="Date" class="form-control"> 
+                    <label>FECHA DE INGRESO A LA EMPRESA</label><input ng-model="RegistrarPersona.fechaingreso" type="date" class="form-control"> 
                   </div>
                   <input ng-model="RegistrarPersona.turnotrabajo" type="text" class="form-control" placeholder="TURNO DE TRABAJO" required><br>
                 </div><!-- /input-group -->

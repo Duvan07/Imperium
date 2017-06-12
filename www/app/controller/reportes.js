@@ -1,4 +1,4 @@
-angular.module('imperium').controller('reportesController', ['$scope', function ($scope) {
+angular.module('imperium').controller('reportesController', ['$scope', '$sessionStorage', '$location', function ($scope, $sessionStorage, $location) {
 
     $scope.tabs = [
       {tab: 'active', show: true},
@@ -20,5 +20,13 @@ angular.module('imperium').controller('reportesController', ['$scope', function 
       $scope.tabs = [];
       $scope.tabs[2] = {tab: 'active', show: true};
     };
+    
+    $scope.buscar = function () {
+            $sessionStorage.textoBuscar = $scope.bus;
+            console.log($scope.bus);
+            $location.path("/buscar");
+
+            location.reload(true);
+        }
 
   }]);
