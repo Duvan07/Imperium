@@ -62,6 +62,11 @@ angular.module('imperium').config(['$routeProvider', '$httpProvider', function c
                     templateUrl: 'app/template/buscarunapersona.html',
                     middleware: ['comprobarSession']
                 }).
+                when('/editar', {
+                    controller: 'editarController',
+                    templateUrl: 'app/template/editar.html',
+                    middleware: ['comprobarSession']
+                }).
                 otherwise('/');
     }]);
 

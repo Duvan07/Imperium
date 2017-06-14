@@ -1,0 +1,193 @@
+<link rel="stylesheet" href="css/Estilo.css">
+<link rel="stylesheet" href=" css/estilosreportes.css"/>
+
+<div class="col-lg-12 header">
+    <div class="container container-fluid">
+        <div class="panel panel-default menu col-lg-3">
+            <div class="panel-body list-group">
+                <a ng-show="(rol == Administrador) ? true : false" href="#!/crearusuario" class="list-group-item botonMenu"><div class="centrarTexto">AGREGAR NUEVO USUARIO</div></a>
+                <a ng-show="(rol == Administrador) ? true : false" href="#!/menuprincipal" class="list-group-item botonMenu"><div class="centrarTexto">REGISTRAR NUEVA PERSONA</div></a>
+                <a href="#!/controlentradasalida" class="list-group-item botonMenu"><div style="text-align: center;">CONTROL DE ENTRADA Y SALIDA DEL PERSONAL</div></a>
+                <a ng-show="(rol == Administrador) ? true : false" href="#!/reportes" class="list-group-item botonMenu "><div class="centrarTexto">REPORTES DEL PERSONAL</div></a>
+            </div>
+        </div>
+        <form ng-submit="buscar()" class="form-inline frmSearch text-right col-lg-6">
+            <div class="input-group">
+                <input ng-model="bus.texto" type="text" class="form-control masLargo" placeholder="Buscar por..." required>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </span>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container container-fluid contenedor">
+    <div class="col-lg-offset-3 col-lg-9 principal">
+        <div class="panel panel-default contenido">
+            <div class="panel-body">
+                <div>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="datosP sinActive" ng-class="tabs[0].tab"><a ng-click="activeTab1()" role="tab" >DATOS PERSONALES</a></li>
+                        <li role="presentation" class="datosP sinActive" ng-class="tabs[1].tab"><a ng-click="activeTab2()" role="tab">INFORMACION BASICA</a></li>
+                        <li role="presentation" class="datosP sinActive" ng-class="tabs[2].tab"><a ng-click="activeTab3()" role="tab">INFORMACION DE CONTACTO</a></li>
+                        <li role="presentation" class="datosP sinActive" ng-class="tabs[3].tab"><a ng-click="activeTab4()" role="tab">INFORMACION FAMILIAR</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <!-- DATOS PERSONALES -->
+                    <form ng-submit="editarP()" class="tab-content">
+                        <div class="alert alert-success" ng-show="contactoEditado">
+                            <center>Contacto Editado Con Exito</center>
+                        </div>
+                        <div role="tabpanel" class="tab-pane my-element" ng-class="tabs[0].tab" ng-show="tabs[0].show" id="datosP">
+                            <div class="row formularioDp">
+                                <div class="col-lg-6">
+                                    <div  class="form-group">
+                                        <input ng-model="editarpersona.nombres" type="text" class="form-control" placeholder="NOMBRES" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input ng-model="editarpersona.apellidos" type="text" class="form-control" placeholder="APELLIDOS" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input ng-model="editarpersona.cedula" type="number" class="form-control" placeholder="CÉDULA" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>GENERO</label> <BR>
+                                        <input ng-model="editarpersona.genero" type="radio" name="genero" id="optionsRadios2" value="f" required=""><label>F</label> 
+                                        <input ng-model="editarpersona.genero" type="radio" name="genero" id="optionsRadios2" value="m" required=""><label>M</label> 
+                                    </div>
+                                    <div  class="form-group">
+                                        <label>FECHA DE NACIMIENTO</label><input ng-model="editarpersona.fechanacimiento" value="{{editarpersona.fechanacimiento}}" type="date" class="form-control" required> 
+                                    </div>
+                                    <div class="form-group">
+                                        <input ng-model="editarpersona.edad" type="text" class="form-control" placeholder="EDAD" required>
+                                    </div>
+                                    <input ng-model="editarpersona.lugarnacimiento" type="text" class="form-control" placeholder="LUGAR DE NACIMIENTO" required>
+                                </div><!-- /input-group -->
+                                <!-- Columna 2 -->
+                                <div class="col-lg-6">
+                                    <div  class="form-group">
+                                        <input ng-model="editarpersona.edtadocivil" type="text" class="form-control" placeholder="ESTADO CIVIL" required>
+                                    </div>
+                                    <div  class="form-group">
+                                        <input ng-model="editarpersona.raza" type="text" class="form-control" placeholder="RAZA" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input ng-model="editarpersona.estratosocial" type="text" class="form-control" placeholder="ESTRATO SOCIAL" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input ng-model="editarpersona.nacionalidad" type="text" class="form-control" placeholder="NACIONALIDAD" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input ng-model="editarpersona.escolaridad" type="text" class="form-control" placeholder="ESCOLARIDAD" required>
+                                    </div>
+                                    <input ng-model="editarpersona.profesion" type="text" class="form-control" placeholder="PROFESION" required><br>
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-3 col-lg-9 text-right footer">
+                                            <button class="btn siguietne">Siguiente</button>
+                                        </div>
+                                    </div>
+                                </div><!-- /input-group -->
+                            </div><!-- /.col-lg-6 -->
+                        </div><!-- /.row -->
+
+                        <!-- INFORMACION BASICA -->
+                        <div role="tabpanel" class="tab-pane my-element" ng-class="tabs[1].tab" ng-show="tabs[1].show"id="informacionB">
+                            <div class="row formularioDp">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input ng-model="editarpersona.antiguedad" type="text" class="form-control" placeholder="ANTIGÜEDAD" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input ng-model="editarpersona.cargo" type="text" class="form-control" placeholder="CARGO" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input ng-model="editarpersona.centrotrabajo" type="text" class="form-control" placeholder="CENTRO DE TRABAJO" required>
+                                    </div>
+                                    <div  class="form-group">
+                                        <input ng-model="editarpersona.area" type="text" class="form-control" placeholder="AREA / SECCION / LUGAR DE TRABAJO" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>FECHA DE INGRESO A LA EMPRESA</label><input ng-model="editarpersona.fecingresoempresa" value="{{editarpersona.fecingresoempresa}}" type="date" class="form-control"> 
+                                    </div>
+                                    <input ng-model="editarpersona.turno" type="text" class="form-control" placeholder="TURNO DE TRABAJO" required><br>
+                                </div><!-- /input-group -->
+                                <!-- Columna 2 -->
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input ng-model="editarpersona.salario" type="text" class="form-control" placeholder="SALARIO" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input ng-model="editarpersona.tipovinculacion" type="text" class="form-control" placeholder="TIPO DE VINCULACION" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input ng-model="editarpersona.arl" type="text" class="form-control" placeholder="ARL" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input ng-model="editarpersona.eps" type="text" class="form-control" placeholder="EPS" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input ng-model="editarpersona.afp" type="text" class="form-control" placeholder="AFP" required>
+                                    </div>
+                                    <input ng-model="editarpersona.consentimiento" type="text" class="form-control" placeholder="CONSENTIMIENTO INFORMADO" required><br>
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-3 col-lg-9 text-right footer">
+                                            <button class="btn siguietne">Siguiente</button>
+                                        </div>
+                                    </div>
+                                </div><!-- /input-group -->
+                            </div><!-- /.row -->
+                        </div>
+                        <!-- INFORMACION DE CONTACTO -->
+                        <div role="tabpanel" class="tab-pane my-element" ng-class="tabs[2].tab" ng-show="tabs[2].show" id="informacionC">
+                            <div class="row formularioDp">
+                                <div class=" form-horizontal col-lg-offset-3 col-lg-6">
+                                    <div class="form-group">
+                                        <input ng-model="editarpersona.lugarresidencia" type="text" class="form-control" placeholder="LUGAR DE RESIDENCIA" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input ng-model="editarpersona.direccionresidencia" type="text" class="form-control" placeholder="DIRECCION DE RESIDENCIA" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input ng-model="editarpersona.notelefono" type="text" class="form-control" placeholder="NUMERO DE TELEFONO" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input ng-model="editarpersona.correo" type="text" class="form-control" placeholder="CORREO" required><br>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-3 col-lg-9 text-right footer">
+                                            <button class="btn siguietne">Siguiente</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- INFORMACION FAMILIAR -->
+                        <div role="tabpanel" class="tab-pane my-element" ng-class="tabs[3].tab" ng-show="tabs[3].show" id="informacionF">
+                            <div class="row formularioDp">
+                                <div class=" form-horizontal col-lg-offset-3 col-lg-6">
+                                    <div>
+                                        <div>
+                                            <div class="form-group">
+                                                <input ng-model="editarpersona.nohijos" type="text" class="form-control" placeholder="NUMERO DE HIJOS" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input ng-model="editarpersona.personascargo" type="text" class="form-control" placeholder="OTRAS PERSONAS A CARGO" required>
+                                            </div>
+                                            <div class="col-lg-offset-3 col-lg-9 text-right footer">
+                                                <button type="submit" class="btn  siguietne">Editar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>    
+        </div>
+        <div class="col-lg-offset-3 col-lg-9 text-right footer" ng-include=" 'app/template/partial/pie.html'"></div>
+    </div>
+</div>

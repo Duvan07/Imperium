@@ -11,5 +11,7 @@ interface INuevapersona {
     public function update(nuevapersona $mer_persona);
 
     public function delete($id);
+    
+    public function search($nombre);
 }
 

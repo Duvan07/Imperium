@@ -21,6 +21,11 @@ angular.module('imperium').controller('buscarController', ['$scope', 'buscarpers
 
             location.reload(true);
         }
+        
+        $scope.editardatospersona = function (nuevapersona) {
+            $sessionStorage.datospersona = nuevapersona;
+            $location.path('/editar');
+        }
     }]);
 
 

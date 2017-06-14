@@ -7,7 +7,7 @@ class buscarpersona extends controllerExtended{
             $this->loadTablePersona();
             
             $nuevapersonaDAO = new personaDAOExt($this->getConfig());
-            $respuesta1 = $nuevapersonaDAO->search($request->getParam('texto'));
+            $respuesta1 = $nuevapersonaDAO->search($request->getParam('texto'));            
             $respuesta2 = array(
                     'code' => (count($respuesta1) > 0) ? 200 : 500,
                     'data' => $respuesta1,
