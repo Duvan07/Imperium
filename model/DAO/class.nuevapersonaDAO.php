@@ -2,12 +2,20 @@
 
 class nuevapersonaDAO extends dataSource implements INuevapersona {
 
-    public function delete($id) {
-        $sql = 'DELETE FROM mer_persona WHERE id = :id';
-        $params = array(
-            ':id' => $id
-        );
-        return $this->execute($sql, $params);
+    public function delete($id, $logico = true) {
+        if ($logico === true) {
+            $sql = 'UPDATE mer_persona SET per_deleted_at = now() WHERE per_id = :id';
+            $params = array(
+                ':id' => $id
+            );
+            return $this->execute($sql, $params);
+        } else if ($logico === false) {
+            $sql = 'DELETE FROM mer_persona WHERE per_id = :id AND per_deleted_at IS NULL';
+            $params = array(
+                ':id' => (integer) $id
+            );
+            return $this->execute($sql, $params);
+        }
     }
 
     public function insert(\nuevapersona $mer_persona) {
@@ -58,7 +66,7 @@ class nuevapersonaDAO extends dataSource implements INuevapersona {
                 . 'per_genero, per_fenacimiento, per_edad, per_lugarnacimiento,per_nacionalidad,per_lugarresidencia,per_notelefono,'
                 . 'per_direccionresidencia,per_correo,per_fecingresoempresa,per_antiguedad,per_cargo,per_centrotrabajo,per_area,per_turno,per_salario,'
                 . 'per_tipovinculacion,per_arl,per_eps,per_afp,per_escolaridad,per_profesion,per_estadocivi,per_raza,per_nohijos,per_otraperacargo,'
-                . 'per_estratosocial,per_concentimientoformado FROM mer_persona';
+                . 'per_estratosocial,per_concentimientoformado FROM mer_persona WHERE per_deleted_at IS NULL';
         return $this->query($sql);
     }
 
@@ -80,8 +88,8 @@ class nuevapersonaDAO extends dataSource implements INuevapersona {
                 . 'per_direccionresidencia = :dir, per_notelefono = :tel, per_correo = :correo, per_fecingresoempresa = :feingre, per_antiguedad = :anti, per_cargo = :cargo, '
                 . 'per_centrotrabajo = :centro, per_area= :area, per_turno = :tur, per_salario = :sal, per_tipovinculacion = :tiv, per_arl = :arl, per_eps = :eps, per_afp = :afp, '
                 . 'per_escolaridad = :esc, per_profesion = :profe, per_estadocivi = :estadoc, per_raza = :raza, per_nohijos = :nohijos, per_otrasperacargo = :otp, '
-                . 'per_estratosocial = :estrato, per_conseninformado = :consent WHERE  per_id = :id';
-        
+                . 'per_estratosocial = :estrato, per_conseninformado = :consent, per_updated_at = now() WHERE  per_id = :id';
+
         $params = array(
             ':ced' => $mer_persona->getCedula(),
             ':nom' => $mer_persona->getNombres(),

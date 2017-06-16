@@ -1,7 +1,7 @@
 angular.module('imperium').controller('editarController', ['$scope', 'editarpersonaService', '$sessionStorage', '$location', '$timeout', function ($scope, editarservice, $sessionStorage, $location, $timeout) {
 
         $scope.editarpersona = {};
-
+		
         $scope.editarpersona.id = $sessionStorage.datospersona.per_id;
         $scope.editarpersona.cedula = Number($sessionStorage.datospersona.per_cedula);
         $scope.editarpersona.nombres = $sessionStorage.datospersona.per_nombres;
@@ -38,8 +38,14 @@ angular.module('imperium').controller('editarController', ['$scope', 'editarpers
         $scope.contactoEditado = false;
 
         $scope.editarP = function () {
-            $scope.editarpersona.fechanacimiento = moment($scope.editarpersona.fechanacimiento, "YYYY-MM-DD").format('YYYY-MM-DD');
-            $scope.editarpersona.fecingresoempresa = moment($scope.editarpersona.fecingresoempresa, "YYYY-MM-DD").format('YYYY-MM-DD');
+//            console.log($scope.editarpersona.fecingresoempresa);
+			// Invalid date
+			$scope.editarpersona.fechanacimiento = (typeof $scope.editarpersona.fechanacimiento === "undefined") ? $sessionStorage.datospersona.per_fenacimiento : moment($scope.editarpersona.fechanacimiento, "YYYY-MM-DD").format('YYYY-MM-DD');
+			$scope.editarpersona.fecingresoempresa = ($scope.editarpersona.fecingresoempresa === null) ? $sessionStorage.datospersona.per_fecingresoempresa : moment($scope.editarpersona.fecingresoempresa, "YYYY-MM-DD").format('YYYY-MM-DD');
+//            $scope.editarpersona.fecingresoempresa = moment($scope.editarpersona.fecingresoempresa, "YYYY-MM-DD").format('YYYY-MM-DD');
+			
+			console.log($scope.editarpersona);
+			
             editarservice.editarperso($scope.editarpersona).then(function succesCallback(response) {
                 $scope.contactoEditado = false;
                 $scope.editarpersona = {};

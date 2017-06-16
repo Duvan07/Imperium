@@ -1,21 +1,20 @@
 <?php
 
-class buscarpersona extends controllerExtended {
+class eliminarPersona extends controllerExtended {
 
     public function main(\request $request) {
         try {
             $this->loadTablePersona();
-
+            
             $nuevapersonaDAO = new personaDAOExt($this->getConfig());
-            $respuesta1 = $nuevapersonaDAO->search($request->getParam('texto'));
+            $respuesta1 = $nuevapersonaDAO->delete($request->getParam('id'));
             $respuesta2 = array(
-                'code' => (count($respuesta1) > 0) ? 200 : 500,
-                'data' => $respuesta1,
-                'mensaje' => 'personaencontrada'
+                    'code' => ($respuesta1 > 0 ) ? 200 : 500,
+                    'data' => $respuesta1
             );
-
+            
             $this->setParam('rsp', $respuesta2);
-            $this->setView('json');
+            $this->setView('json');        
         } catch (Exception $exc) {
             echo $exc->getMessage();
         }

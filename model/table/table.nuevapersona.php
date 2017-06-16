@@ -34,8 +34,7 @@ class nuevapersona {
   private $otrasperacargo;
   private $estratosocial;
   private $concentimientoformado;
-
-  function getId() {
+            function getId() {
     return $this->id;
   }
 

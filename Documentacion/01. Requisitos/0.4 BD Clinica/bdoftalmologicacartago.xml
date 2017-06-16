@@ -44,13 +44,13 @@
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_cedula" nu="0">
-        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="20" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_nombres" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="60" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_apellidos" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="60" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="150" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_genero" nu="0">
         <DT arr="0" ds="VarChar" en="" id="12" ln="1" sc="null" sg="1" un="0"/>
@@ -59,70 +59,70 @@
         <DT arr="0" ds="Date" en="" id="91" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_edad" nu="0">
-        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="3" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_lugarnacimiento" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="200" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_nacionalidad" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_lugarresidencia" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="60" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="150" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_direccionresidencia" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="60" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="300" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_notelefono" nu="0">
-        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="15" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_correo" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="300" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_fecingresoempresa" nu="0">
         <DT arr="0" ds="Date" en="" id="91" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_antiguedad" nu="0">
-        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="3" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_cargo" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="200" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_centrotrabajo" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="30" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_area" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="30" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_turno" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="20" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="30" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_salario" nu="0">
         <DT arr="0" ds="Double" en="" id="8" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_tipovinculacion" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="40" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_arl" nu="0">
-        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="3" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_eps" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_afp" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="30" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_escolaridad" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_profesion" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="200" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_estadocivi" nu="0">
         <DT arr="0" ds="VarChar" en="" id="12" ln="15" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_raza" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="30" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_nohijos" nu="0">
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
@@ -134,7 +134,16 @@
         <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="per_conseninformado" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="300" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="now()" nm="per_created_at" nu="0">
+        <DT arr="0" ds="TimeStamp" en="" id="93" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="per_updated_at" nu="1">
+        <DT arr="0" ds="TimeStamp" en="" id="93" ln="null" sc="null" sg="1" un="0"/>
+      </Cl>
+      <Cl au="0" df="" nm="per_deleted_at" nu="1">
+        <DT arr="0" ds="TimeStamp" en="" id="93" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Idx clu="0" ftx="0" nm="mer_persona_Cedula_Persona_Idx" spa="0" unq="1">
         <ClNs>per_cedula</ClNs>
@@ -159,31 +168,31 @@
       <TblOpts>WITHOUT OIDS</TblOpts>
       <Pk ClNs="usu_id" nm="pkmer_usuario"/>
       <Cl au="1" df="nextval('mer_usuario_usu_id_seq'::regclass)" nm="usu_id" nu="0">
-        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="usu_cedula" nu="0">
-        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="usu_nombres" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="60" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="usu_apellidos" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="60" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="usu_telefono" nu="0">
-        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="usu_alias" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="30" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="50" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="usu_contrasena" nu="0">
         <DT arr="0" ds="VarChar" en="" id="12" ln="32" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="usu_correo" nu="0">
-        <DT arr="0" ds="VarChar" en="" id="12" ln="100" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="VarChar" en="" id="12" ln="300" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="rol_id" nu="0">
-        <DT arr="0" ds="Integer" en="" id="4" ln="null" sc="null" sg="1" un="0"/>
+        <DT arr="0" ds="BigInt" en="" id="-5" ln="null" sc="null" sg="1" un="0"/>
       </Cl>
       <Cl au="0" df="" nm="rol_usu" nu="0">
         <DT arr="0" ds="VarChar" en="" id="12" ln="20" sc="null" sg="1" un="0"/>
