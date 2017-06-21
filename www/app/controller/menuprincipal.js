@@ -1,23 +1,26 @@
-angular.module('imperium').controller('menuprincipalController', ['$scope', 'registrarpersonaService', '$sessionStorage', '$location', function ($scope, PersonaRegistrada, $sessionStorage, $location) {
+angular.module('imperium').controller('menuprincipalController', ['$scope', 'registrarpersonaService', '$sessionStorage', '$location', '$timeout', function ($scope, PersonaRegistrada, $sessionStorage, $location, $timeout) {
 
         $scope.RegistrarPersona = {
         };
-        $scope.PersonaRegistrada = false;
+        $scope.contactoagregado = false;
 
         $scope.registarP = function () {
             $scope.RegistrarPersona.fechanaci = moment($scope.RegistrarPersona.fechanaci, "YYYY-MM-DD").format('YYYY-MM-DD');
             $scope.RegistrarPersona.fechaingreso = moment($scope.RegistrarPersona.fechaingreso, "YYYY-MM-DD").format('YYYY-MM-DD');
             PersonaRegistrada.registrarperso($scope.RegistrarPersona).then(function succesCallback(response) {
 
-                $scope.PersonaRegistrada = false;
+                $scope.contactoagregado = false;
                 $scope.RegistrarPersona = {};
                 if (response.data.code == 500) {
 
 
                 } else {
-                    $scope.PersonaRegistrada = true;
+                    $scope.contactoagregado = true;
                     $scope.RegistrarPersona = {};
-
+					$timeout(function (){
+                        window.location.reload();
+                        $location.path('/acercade');
+                    }, 1000);
                 }
             }, function errorCallback(response) {
                 console.error(response);

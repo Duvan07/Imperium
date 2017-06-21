@@ -23,168 +23,178 @@
 </div>
 
 <div class="container container-fluid contenedor">
-  <div class="col-lg-offset-3 col-lg-9 principal">
-    <div class="panel panel-default contenido">
-      <div class="panel-body">
-        <div>
-          <!-- Nav tabs -->
-          <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="datosP sinActive" ng-class="tabs[0].tab"><a ng-click="activeTab1()" role="tab" >DATOS PERSONALES</a></li>
-            <li role="presentation" class="datosP sinActive" ng-class="tabs[1].tab"><a ng-click="activeTab2()" role="tab">INFORMACION BASICA</a></li>
-            <li role="presentation" class="datosP sinActive" ng-class="tabs[2].tab"><a ng-click="activeTab3()" role="tab">INFORMACION DE CONTACTO</a></li>
-            <li role="presentation" class="datosP sinActive" ng-class="tabs[3].tab"><a ng-click="activeTab4()" role="tab">INFORMACION FAMILIAR</a></li>
-          </ul>
-          <!-- Tab panes -->
-          <!-- DATOS PERSONALES -->
-          <form ng-submit="registarP()" class="tab-content">
-            <div role="tabpanel" class="tab-pane my-element" ng-class="tabs[0].tab" ng-show="tabs[0].show" id="datosP">
-              <div class="row formularioDp">
-                <div class="col-lg-6">
-                  <div  class="form-group">
-                    <input ng-model="RegistrarPersona.nombre" type="text" class="form-control" placeholder="NOMBRES" required>
-                  </div>
-                  <div class="form-group">
-                    <input ng-model="RegistrarPersona.apellido" type="text" class="form-control" placeholder="APELLIDOS" required>
-                  </div>
-                  <div class="form-group">
-                    <input ng-model="RegistrarPersona.cedula" type="number" class="form-control" placeholder="CÉDULA" required>
-                  </div>
-                  <div class="form-group">
-                    <label>GENERO</label> <BR>
-                    <input ng-model="RegistrarPersona.genero" type="radio" name="genero" id="optionsRadios2" value="f" required=""><label>F</label> 
-                    <input ng-model="RegistrarPersona.genero" type="radio" name="genero" id="optionsRadios2" value="m" required=""><label>M</label> 
-                  </div>
-                  <div  class="form-group">
-                    <label>FECHA DE NACIMIENTO</label><input ng-model="RegistrarPersona.fechanaci" type="date" class="form-control" required> 
-                  </div>
-                  <div class="form-group">
-                    <input ng-model="RegistrarPersona.edad" type="text" class="form-control" placeholder="EDAD" required>
-                  </div>
-                  <input ng-model="RegistrarPersona.lugarnaci" type="text" class="form-control" placeholder="LUGAR DE NACIMIENTO" required>
-                </div><!-- /input-group -->
-                <!-- Columna 2 -->
-                <div class="col-lg-6">
-                  <div  class="form-group">
-                    <input ng-model="RegistrarPersona.estadocivil" type="text" class="form-control" placeholder="ESTADO CIVIL" required>
-                  </div>
-                  <div  class="form-group">
-                    <input ng-model="RegistrarPersona.raza" type="text" class="form-control" placeholder="RAZA" required>
-                  </div>
-                  <div class="form-group">
-                    <input ng-model="RegistrarPersona.estratosocial" type="text" class="form-control" placeholder="ESTRATO SOCIAL" required>
-                  </div>
-                  <div class="form-group">
-                    <input ng-model="RegistrarPersona.nacionalidad" type="text" class="form-control" placeholder="NACIONALIDAD" required>
-                  </div>
-                  <div class="form-group">
-                    <input ng-model="RegistrarPersona.escolaridad" type="text" class="form-control" placeholder="ESCOLARIDAD" required>
-                  </div>
-                  <input ng-model="RegistrarPersona.profesion" type="text" class="form-control" placeholder="PROFESION" required><br>
-                  <div class="form-group">
-                    <div class="col-lg-offset-3 col-lg-9 text-right footer">
-                      <button class="btn siguietne">Siguiente</button>
-                    </div>
-                  </div>
-                </div><!-- /input-group -->
-              </div><!-- /.col-lg-6 -->
-            </div><!-- /.row -->
+	<div class="col-lg-offset-3 col-lg-9 principal">
+		<div class="panel panel-default contenido">
+			<div class="panel-body">
+				<div>
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="datosP sinActive" ng-class="tabs[0].tab"><a ng-click="activeTab1()" role="tab" >DATOS PERSONALES</a></li>
+						<li role="presentation" class="datosP sinActive" ng-class="tabs[1].tab"><a ng-click="activeTab2()" role="tab">INFORMACION BASICA</a></li>
+						<li role="presentation" class="datosP sinActive" ng-class="tabs[2].tab"><a ng-click="activeTab3()" role="tab">INFORMACION DE CONTACTO</a></li>
+						<li role="presentation" class="datosP sinActive" ng-class="tabs[3].tab"><a ng-click="activeTab4()" role="tab">INFORMACION FAMILIAR</a></li>
+					</ul>
+					<!-- Tab panes -->
+					<!-- DATOS PERSONALES -->
+					<form ng-submit="registarP()" class="tab-content">
+						<br>
+						<div class="alert alert-success" ng-show="contactoagregado">
+                            <center>Registro Agregado Con Exito</center>
+                        </div>
+						<div role="tabpanel" class="tab-pane my-element" ng-class="tabs[0].tab" ng-show="tabs[0].show" id="datosP">
+							<div class="row formularioDp">
+								<div class="col-lg-6">
+									<div  class="form-group">
+										<input ng-model="RegistrarPersona.nombre" type="text" class="form-control" placeholder="NOMBRES" title="NOMBRES" required>
+									</div>
+									<div class="form-group">
+										<input ng-model="RegistrarPersona.apellido" type="text" class="form-control" placeholder="APELLIDOS" title="APELLIDOS" required>
+									</div>
+									<div class="form-group">
+										<input ng-model="RegistrarPersona.cedula" type="number" class="form-control" placeholder="CÉDULA" title="CÉDULA" required>
+									</div>
+									<div class="form-group">
+										<label>GENERO</label> <BR>
+										<input ng-model="RegistrarPersona.genero" type="radio" name="genero" id="optionsRadios2" value="f" title="FEMENINO" required=""><label>F</label> 
+										<input ng-model="RegistrarPersona.genero" type="radio" name="genero" id="optionsRadios2" value="m" title="MASCULINO" required=""><label>M</label> 
+									</div>
+									<div  class="form-group">
+										<label>FECHA DE NACIMIENTO</label><input ng-model="RegistrarPersona.fechanaci" type="date" class="form-control" title="FECHA DE NACIMIENTO" required> 
+									</div>
+									<div class="form-group">
+										<div class="input-group">
+											<input ng-model="RegistrarPersona.edad" type="number" class="form-control botonesaños" placeholder="EDAD" title="EDAD" required>
+											<span class="input-group-addon">AÑOS</span>
+										</div>
+									</div>
+									<input ng-model="RegistrarPersona.lugarnaci" type="text" class="form-control" placeholder="LUGAR DE NACIMIENTO" title="LUGAR DE NACIMIENTO" required>
+								</div><!-- /input-group -->
+								<!-- Columna 2 -->
+								<div class="col-lg-6">
+									<div  class="form-group">
+										<input ng-model="RegistrarPersona.estadocivil" type="text" class="form-control" placeholder="ESTADO CIVIL" title="ESTADO CIVIL" required>
+									</div>
+									<div  class="form-group">
+										<input ng-model="RegistrarPersona.raza" type="text" class="form-control" placeholder="RAZA" title="RAZA" required>
+									</div>
+									<div class="form-group">
+										<input ng-model="RegistrarPersona.estratosocial" type="number" class="form-control" placeholder="ESTRATO SOCIAL" title="ESTRATO SOCIAL" required>
+									</div>
+									<div class="form-group">
+										<input ng-model="RegistrarPersona.nacionalidad" type="text" class="form-control" placeholder="NACIONALIDAD" title="NACIONALIDAD" required>
+									</div>
+									<div class="form-group">
+										<input ng-model="RegistrarPersona.escolaridad" type="text" class="form-control" placeholder="ESCOLARIDAD" title="ESCOLARIDAD" required>
+									</div>
+									<input ng-model="RegistrarPersona.profesion" type="text" class="form-control" placeholder="PROFESION" title="PROFESION" required><br>
+									<div class="col-lg-offset-3 col-lg-9 text-right footer">
+										<a href="#!acercade"><button type="submit" class="btn  siguietne">Cancelar</button></a>
+									</div>
+								</div><!-- /input-group -->
+							</div><!-- /.col-lg-6 -->
+						</div><!-- /.row -->
 
-            <!-- INFORMACION BASICA -->
-            <div role="tabpanel" class="tab-pane my-element" ng-class="tabs[1].tab" ng-show="tabs[1].show"id="informacionB">
-              <div class="row formularioDp">
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <input ng-model="RegistrarPersona.antiguedad" type="text" class="form-control" placeholder="ANTIGÜEDAD" required>
-                  </div>
-                  <div class="form-group">
-                    <input ng-model="RegistrarPersona.cargo" type="text" class="form-control" placeholder="CARGO" required>
-                  </div>
-                  <div class="form-group">
-                    <input ng-model="RegistrarPersona.centrotrabajo" type="text" class="form-control" placeholder="CENTRO DE TRABAJO" required>
-                  </div>
-                  <div  class="form-group">
-                    <input ng-model="RegistrarPersona.area" type="text" class="form-control" placeholder="AREA / SECCION / LUGAR DE TRABAJO" required>
-                  </div>
-                  <div class="form-group">
-                    <label>FECHA DE INGRESO A LA EMPRESA</label><input ng-model="RegistrarPersona.fechaingreso" type="date" class="form-control"> 
-                  </div>
-                  <input ng-model="RegistrarPersona.turnotrabajo" type="text" class="form-control" placeholder="TURNO DE TRABAJO" required><br>
-                </div><!-- /input-group -->
-                <!-- Columna 2 -->
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <input ng-model="RegistrarPersona.salario" type="text" class="form-control" placeholder="SALARIO" required>
-                  </div>
-                  <div class="form-group">
-                    <input ng-model="RegistrarPersona.tipovinculacion" type="text" class="form-control" placeholder="TIPO DE VINCULACION" required>
-                  </div>
-                  <div class="form-group">
-                    <input ng-model="RegistrarPersona.arl" type="text" class="form-control" placeholder="ARL" required>
-                  </div>
-                  <div class="form-group">
-                    <input ng-model="RegistrarPersona.eps" type="text" class="form-control" placeholder="EPS" required>
-                  </div>
-                  <div class="form-group">
-                    <input ng-model="RegistrarPersona.afp" type="text" class="form-control" placeholder="AFP" required>
-                  </div>
-                  <input ng-model="RegistrarPersona.consentimiento" type="text" class="form-control" placeholder="CONSENTIMIENTO INFORMADO" required><br>
-                  <div class="form-group">
-                    <div class="col-lg-offset-3 col-lg-9 text-right footer">
-                      <button class="btn siguietne">Siguiente</button>
-                    </div>
-                  </div>
-                </div><!-- /input-group -->
-              </div><!-- /.row -->
-            </div>
-            <!-- INFORMACION DE CONTACTO -->
-            <div role="tabpanel" class="tab-pane my-element" ng-class="tabs[2].tab" ng-show="tabs[2].show" id="informacionC">
-              <div class="row formularioDp">
-                <div class=" form-horizontal col-lg-offset-3 col-lg-6">
-                  <div class="form-group">
-                    <input ng-model="RegistrarPersona.lugarresidencia" type="text" class="form-control" placeholder="LUGAR DE RESIDENCIA" required>
-                  </div>
-                  <div class="form-group">
-                    <input ng-model="RegistrarPersona.direccionresidencia" type="text" class="form-control" placeholder="DIRECCION DE RESIDENCIA" required>
-                  </div>
-                  <div class="form-group">
-                    <input ng-model="RegistrarPersona.telefono" type="text" class="form-control" placeholder="NUMERO DE TELEFONO" required>
-                  </div>
-                  <div class="form-group">
-                    <input ng-model="RegistrarPersona.correo" type="text" class="form-control" placeholder="CORREO" required><br>
-                  </div>
-                  <div class="form-group">
-                    <div class="col-lg-offset-3 col-lg-9 text-right footer">
-                      <button class="btn siguietne">Siguiente</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- INFORMACION FAMILIAR -->
-            <div role="tabpanel" class="tab-pane my-element" ng-class="tabs[3].tab" ng-show="tabs[3].show" id="informacionF">
-              <div class="row formularioDp">
-                <div class=" form-horizontal col-lg-offset-3 col-lg-6">
-                  <div>
-                    <div>
-                      <div class="form-group">
-                        <input ng-model="RegistrarPersona.numerohijos" type="text" class="form-control" placeholder="NUMERO DE HIJOS" required>
-                      </div>
-                      <div class="form-group">
-                        <input ng-model="RegistrarPersona.personasacargo" type="text" class="form-control" placeholder="OTRAS PERSONAS A CARGO" required>
-                      </div>
-                      <div class="col-lg-offset-3 col-lg-9 text-right footer">
-                        <button type="submit" class="btn  siguietne">Guardar</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </form>
-
-        </div>
-      </div>    
-    </div>
-    <div class="col-lg-offset-3 col-lg-9 text-right footer" ng-include=" 'app/template/partial/pie.html'"></div>
-  </div>
+						<!-- INFORMACION BASICA -->
+						<div role="tabpanel" class="tab-pane my-element" ng-class="tabs[1].tab" ng-show="tabs[1].show"id="informacionB">
+							<div class="row formularioDp">
+								<div class="col-lg-6">
+									<div class="form-group">
+										<div class="input-group">
+											<input ng-model="RegistrarPersona.antiguedad" type="number" class="form-control" placeholder="ANTIGÜEDAD" title="ANTIGÜEDAD" required>
+											<span class="input-group-addon">AÑOS</span>
+										</div>
+									</div>
+									<div class="form-group">
+										<input ng-model="RegistrarPersona.cargo" type="text" class="form-control" placeholder="CARGO" title="CARGO" required>
+									</div>
+									<div class="form-group">
+										<input ng-model="RegistrarPersona.centrotrabajo" type="text" class="form-control" placeholder="CENTRO DE TRABAJO" title="CENTRO DE TRABAJO" required>
+									</div>
+									<div  class="form-group">
+										<input ng-model="RegistrarPersona.area" type="text" class="form-control" placeholder="AREA / SECCION / LUGAR DE TRABAJO" title="AREA / SECCION / LUGAR DE TRABAJO" required>
+									</div>
+									<div class="form-group">
+										<label>FECHA DE INGRESO A LA EMPRESA</label><input ng-model="RegistrarPersona.fechaingreso" type="date" class="form-control" title="FECHA DE INGRESO A LA EMPRESA" required> 
+									</div>
+									<input ng-model="RegistrarPersona.turnotrabajo" type="text" class="form-control" placeholder="TURNO DE TRABAJO" title="TURNO DE TRABAJO" required><br>
+								</div><!-- /input-group -->
+								<!-- Columna 2 -->
+								<div class="col-lg-6">
+									<div class="form-group">
+										<input ng-model="RegistrarPersona.salario" type="number" class="form-control" placeholder="SALARIO" title="SALARIO" required>
+									</div>
+									<div class="form-group">
+										<input ng-model="RegistrarPersona.tipovinculacion" type="text" class="form-control" placeholder="TIPO DE VINCULACION" title="TIPO DE VINCULACIÓN" required>
+									</div>
+									<div class="form-group">
+										<input ng-model="RegistrarPersona.arl" type="number" class="form-control" placeholder="ARL" title="ARL" required>
+									</div>
+									<div class="form-group">
+										<input ng-model="RegistrarPersona.eps" type="text" class="form-control" placeholder="EPS" title="EPS" required>
+									</div>
+									<div class="form-group">
+										<input ng-model="RegistrarPersona.afp" type="text" class="form-control" placeholder="AFP" title="AFP" required>
+									</div>
+									<input ng-model="RegistrarPersona.consentimiento" type="text" class="form-control" placeholder="CONSENTIMIENTO INFORMADO" title="CONSENTIMIENTO INFORMADO" required><br>
+									<div class="col-lg-offset-3 col-lg-9 text-right footer">
+										<a href="#!acercade"><button type="submit" class="btn  siguietne">Cancelar</button></a>
+									</div>
+								</div><!-- /input-group -->
+							</div><!-- /.row -->
+						</div>
+						<!-- INFORMACION DE CONTACTO -->
+						<div role="tabpanel" class="tab-pane my-element" ng-class="tabs[2].tab" ng-show="tabs[2].show" id="informacionC">
+							<div class="row formularioDp">
+								<div class=" form-horizontal col-lg-offset-3 col-lg-6">
+									<div class="form-group">
+										<input ng-model="RegistrarPersona.lugarresidencia" type="text" class="form-control" placeholder="LUGAR DE RESIDENCIA" title="LUGAR DE RESIDENCIA" required>
+									</div>
+									<div class="form-group">
+										<input ng-model="RegistrarPersona.direccionresidencia" type="text" class="form-control" placeholder="DIRECCION DE RESIDENCIA" title="DIRECCIÓN DE RESIDENCIA" required>
+									</div>
+									<div class="form-group">
+										<input ng-model="RegistrarPersona.telefono" type="number" class="form-control" placeholder="NUMERO DE TELEFONO" title="NUMERO DE TELEFONO" required>
+									</div>
+									<div class="form-group">
+										<input ng-model="RegistrarPersona.correo" type="text" class="form-control" placeholder="CORREO" title="CORREO" required><br>
+									</div>
+									<div class="col-lg-offset-3 col-lg-9 text-right footer">
+										<a href="#!acercade"><button type="submit" class="btn  siguietne">Cancelar</button></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- INFORMACION FAMILIAR -->
+						<div role="tabpanel" class="tab-pane my-element" ng-class="tabs[3].tab" ng-show="tabs[3].show" id="informacionF">
+							<div class="row formularioDp">
+								<div class=" form-horizontal col-lg-offset-3 col-lg-6">
+									<div>
+										<div>
+											<div class="form-group">
+												<div class="input-group">
+													<input ng-model="RegistrarPersona.numerohijos" type="number" class="form-control" placeholder="NUMERO DE HIJOS" title="NUMERO DE HIJOS" required>
+													<span class="input-group-addon">HIJOS</span>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="input-group">
+													<input ng-model="RegistrarPersona.personasacargo" type="number" class="form-control" placeholder="OTRAS PERSONAS A CARGO" title="OTRAS PERSONAS A CARGO" required>
+													<span class="input-group-addon">Personas a Cargo</span>
+												</div>
+											</div>
+											<div class="col-lg-offset-3 col-lg-9 text-right footer">
+												<a href="#!acercade"><button type="submit" class="btn  siguietne">Cancelar</button></a>
+												<button type="submit" class="btn  siguietne">Guardar</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>    
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-offset-3 col-lg-9 text-right footer" ng-include=" 'app/template/partial/pie.html'"></div>
 </div>

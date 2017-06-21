@@ -8,30 +8,30 @@ angular.module('imperium').controller('editarController', ['$scope', 'editarpers
         $scope.editarpersona.apellidos = $sessionStorage.datospersona.per_apellidos;
         $scope.editarpersona.genero = $sessionStorage.datospersona.per_genero;
         $scope.editarpersona.fechanacimiento = $sessionStorage.datospersona.per_fenacimiento;
-        $scope.editarpersona.edad = $sessionStorage.datospersona.per_edad;
+        $scope.editarpersona.edad = Number ($sessionStorage.datospersona.per_edad);
         $scope.editarpersona.lugarnacimiento = $sessionStorage.datospersona.per_lugarnacimiento;
         $scope.editarpersona.nacionalidad = $sessionStorage.datospersona.per_nacionalidad;
         $scope.editarpersona.lugarresidencia = $sessionStorage.datospersona.per_lugarresidencia;
         $scope.editarpersona.direccionresidencia = $sessionStorage.datospersona.per_direccionresidencia;
-        $scope.editarpersona.notelefono = $sessionStorage.datospersona.per_notelefono;
+        $scope.editarpersona.notelefono = Number ($sessionStorage.datospersona.per_notelefono);
         $scope.editarpersona.correo = $sessionStorage.datospersona.per_correo;
         $scope.editarpersona.fecingresoempresa = $sessionStorage.datospersona.per_fecingresoempresa;
-        $scope.editarpersona.antiguedad = $sessionStorage.datospersona.per_antiguedad;
+        $scope.editarpersona.antiguedad = Number ($sessionStorage.datospersona.per_antiguedad);
         $scope.editarpersona.cargo = $sessionStorage.datospersona.per_cargo;
         $scope.editarpersona.centrotrabajo = $sessionStorage.datospersona.per_centrotrabajo;
         $scope.editarpersona.area = $sessionStorage.datospersona.per_area;
         $scope.editarpersona.turno = $sessionStorage.datospersona.per_turno;
-        $scope.editarpersona.salario = $sessionStorage.datospersona.per_salario;
+        $scope.editarpersona.salario = Number ($sessionStorage.datospersona.per_salario);
         $scope.editarpersona.tipovinculacion = $sessionStorage.datospersona.per_tipovinculacion;
-        $scope.editarpersona.arl = $sessionStorage.datospersona.per_arl;
+        $scope.editarpersona.arl = Number ($sessionStorage.datospersona.per_arl);
         $scope.editarpersona.eps = $sessionStorage.datospersona.per_eps;
         $scope.editarpersona.afp = $sessionStorage.datospersona.per_afp;
         $scope.editarpersona.escolaridad = $sessionStorage.datospersona.per_escolaridad;
         $scope.editarpersona.profesion = $sessionStorage.datospersona.per_profesion;
         $scope.editarpersona.edtadocivil = $sessionStorage.datospersona.per_estadocivi;
         $scope.editarpersona.raza = $sessionStorage.datospersona.per_raza;
-        $scope.editarpersona.nohijos = $sessionStorage.datospersona.per_nohijos;
-        $scope.editarpersona.personascargo = $sessionStorage.datospersona.per_otrasperacargo;
+        $scope.editarpersona.nohijos = Number ($sessionStorage.datospersona.per_nohijos);
+        $scope.editarpersona.personascargo = Number ($sessionStorage.datospersona.per_otrasperacargo);
         $scope.editarpersona.estratosocial = $sessionStorage.datospersona.per_estratosocial;
         $scope.editarpersona.consentimiento = $sessionStorage.datospersona.per_conseninformado;
 
@@ -41,7 +41,8 @@ angular.module('imperium').controller('editarController', ['$scope', 'editarpers
 //            console.log($scope.editarpersona.fecingresoempresa);
 			// Invalid date
 			$scope.editarpersona.fechanacimiento = (typeof $scope.editarpersona.fechanacimiento === "undefined") ? $sessionStorage.datospersona.per_fenacimiento : moment($scope.editarpersona.fechanacimiento, "YYYY-MM-DD").format('YYYY-MM-DD');
-			$scope.editarpersona.fecingresoempresa = ($scope.editarpersona.fecingresoempresa === null) ? $sessionStorage.datospersona.per_fecingresoempresa : moment($scope.editarpersona.fecingresoempresa, "YYYY-MM-DD").format('YYYY-MM-DD');
+			$scope.editarpersona.fecingresoempresa = (typeof $scope.editarpersona.fecingresoempresa === "undefined") ? $sessionStorage.datospersona.per_fecingresoempresa : moment($scope.editarpersona.fecingresoempresa, "YYYY-MM-DD").format('YYYY-MM-DD');
+//			$scope.editarpersona.fecingresoempresa = ($scope.editarpersona.fecingresoempresa === null) ? $sessionStorage.datospersona.per_fecingresoempresa : moment($scope.editarpersona.fecingresoempresa, "YYYY-MM-DD").format('YYYY-MM-DD');
 //            $scope.editarpersona.fecingresoempresa = moment($scope.editarpersona.fecingresoempresa, "YYYY-MM-DD").format('YYYY-MM-DD');
 			
 			console.log($scope.editarpersona);

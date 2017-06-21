@@ -28,37 +28,35 @@
             <div class="panel-body">
                 <div>
                     <div class="container-fluid">
-                        <div class="row col-lg-12">
-                            <div class="panel principal">
-                                <div class="table-responsive">
-                                    <div>
-                                        <table class="table table-bordered">
-                                            <tr>
-                                                <th>NOMBRE</th>
-                                                <th>APELLIDOS</th>
-                                                <th>CEDULA</th>
-                                                <th>TELEFONO</th>
-                                                <th>CORREO</th>
-                                                <th>DIRECCION</th>
-                                                <th>ACCION</th>
-                                            </tr>
-                                            <tr ng-repeat="x in cargarDatos">
-                                                <td>{{x.per_nombres}}</td>
-                                                <td>{{x.per_apellidos}}</td>
-                                                <td>{{x.per_cedula}}</td>
-                                                <td>{{x.per_notelefono}}</td>
-                                                <td>{{x.per_correo}}</td>
-                                                <td>{{x.per_direccionresidencia}}</td>
-                                                <td>
-                                                    <i ng-click="editardatospersona(x)" title="Editar" class="glyphicon glyphicon-pencil"></i>
-                                                    <i ng-click="eliminar(x)" class="glyphicon glyphicon-trash"></i>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+						<div class="panel principal">
+							<div class="table-responsive">
+								<div>
+									<table class="table table-bordered">
+										<tr>
+											<th>NOMBRE</th>
+											<th>APELLIDOS</th>
+											<th>CEDULA</th>
+											<th>TELEFONO</th>
+											<th>CORREO</th>
+											<th>DIRECCION</th>
+											<th>ACCION</th>
+										</tr>
+										<tr ng-repeat="x in cargarDatos">
+											<td>{{x.per_nombres}}</td>
+											<td>{{x.per_apellidos}}</td>
+											<td>{{x.per_cedula}}</td>
+											<td>{{x.per_notelefono}}</td>
+											<td>{{x.per_correo}}</td>
+											<td>{{x.per_direccionresidencia}}</td>
+											<td>
+												<i ng-click="editardatospersona(x)" title="Editar" class="glyphicon glyphicon-pencil"></i>
+												<i ng-click="eliminar(x)" class="glyphicon glyphicon-trash"></i>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
                     </div>
 
 
@@ -87,6 +85,6 @@
                 </div>
             </div>    
         </div>
-        <div class="col-lg-offset-3 col-lg-9 text-right footer" ng-include=" 'app/template/partial/pie.html'"></div>
     </div>
+	<div class="col-lg-offset-3 col-lg-9 text-right footer" ng-include=" 'app/template/partial/pie.html'"></div>
 </div>

@@ -36,7 +36,7 @@ angular.module('imperium').controller('loginController', ['$scope', 'securitySer
                     $scope.datos = {};
                     $sessionStorage.usuario = response.data.usuario[0];
                     if ($sessionStorage.usuario.rol_id == rolAdmin){
-                        $location.path('/menuprincipal');
+                        $location.path('/acercade');
                     } else {
                         $location.path('/controlentradasalida');
                     }

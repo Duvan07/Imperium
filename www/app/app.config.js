@@ -40,7 +40,7 @@ angular.module('imperium').config(['$routeProvider', '$httpProvider', function c
                 when('/acercade', {
                     controller: 'acercadeController',
                     templateUrl: 'app/template/acercade.html',
-                    middleware: ['comprobarSession']
+                    middleware: ['comprobarSession', 'usuario']
                 }).
                 when('/controlentradasalida', {
                     controller: 'controlentradasalidaController',
@@ -60,12 +60,12 @@ angular.module('imperium').config(['$routeProvider', '$httpProvider', function c
                 when('/buscar', {
                     controller: 'buscarController',
                     templateUrl: 'app/template/buscarunapersona.html',
-                    middleware: ['comprobarSession']
+                    middleware: ['comprobarSession', 'usuario']
                 }).
                 when('/editar', {
                     controller: 'editarController',
                     templateUrl: 'app/template/editar.html',
-                    middleware: ['comprobarSession']
+                    middleware: ['comprobarSession', 'usuario']
                 }).
                 otherwise('/');
     }]);

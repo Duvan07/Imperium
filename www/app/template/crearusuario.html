@@ -34,6 +34,11 @@
                     <form ng-submit="registarU()" class="form-horizontal col-lg-offset-3 col-lg-6">
                         <div class="form-group">
                             <!-- columna 1 -->
+							<div class="alert alert-success" ng-show="usuarioRegistrado">
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<center> Usuario Registrado </center>
+							</div>
+
                             <div>
                                 <input ng-model="dataRegistrarUsuario.nombres" type="text" class="form-control" placeholder="Nombres" required>
                             </div>
@@ -88,18 +93,14 @@
                             </div>
                         </div>
                         <div class="form-group text-right">
-                            <button type="submit" class="btn datosPersonales">Guardar</button>
-                            <button type="reset" class="btn datosPersonales" value="reset">Cancelar</button>
-                        </div>
-
-                        <div class="alert alert-success" ng-show="usuarioRegistrado">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <center> Usuario Registrado </center>
+                            <a href="#!acercade"><button type="submit" class="btn  siguietne">Cancelar</button></a>
+							<button type="submit" class="btn siguietne">Guardar</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="col-lg-offset-3 col-lg-9 text-right footer" ng-include=" 'app/template/partial/pie.html'"></div>
-    </div>  
+    </div>
+	<div class="col-lg-offset-3 col-lg-9 text-right footer" ng-include=" 'app/template/partial/pie.html'"></div>
 </div>
+

@@ -11,9 +11,9 @@
                 <a ng-show="(rol == Administrador) ? true : false" href="#!/reportes" class="list-group-item botonMenu "><div class="centrarTexto">REPORTES DEL PERSONAL</div></a>
             </div>
         </div>
-        <form ng-submit="buscar()" class="form-inline frmSearch text-right col-lg-6">
+        <form class="form-inline frmSearch text-right col-lg-6">
             <div class="input-group">
-                <input ng-model="bus.texto" type="text" class="form-control masLargo" placeholder="Buscar por..." required>
+                <input type="text" class="form-control masLargo" placeholder="Buscar por..." required>
                 <span class="input-group-btn">
                     <button class="btn btn-default" type="submit" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                 </span>
@@ -33,14 +33,14 @@
 
                 <div class="row">
                     <form class="form-horizontal col-lg-offset-3 col-lg-6">
-                        
-                          <div class="form-group">
+
+						<div class="form-group">
                             <!-- columna 3 -->
                             <div>
                                 <input type="text" class="form-control" id="inputEmail3" placeholder="Cédula">
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <!-- columna 1 -->
                             <div>
@@ -54,7 +54,7 @@
                             </div>
                         </div>
                         <!-- crear panel -->
-                       
+
                         <div class="form-group">
                             <div>
                                 <input type="text" class="form-control" id="inputPassword3" placeholder="Cargo">
@@ -89,6 +89,6 @@
 
             </div>
         </div>
-       <div class="col-lg-offset-3 col-lg-9 text-right footer" ng-include=" 'app/template/partial/pie.html'"></div>
-    </div>  
+    </div>
+	<div class="col-lg-offset-3 col-lg-9 text-right footer" ng-include=" 'app/template/partial/pie.html'"></div>
 </div>
