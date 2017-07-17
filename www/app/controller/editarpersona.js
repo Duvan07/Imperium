@@ -1,5 +1,5 @@
 angular.module('imperium').controller('editarController', ['$scope', 'editarpersonaService', '$sessionStorage', '$location', '$timeout', function ($scope, editarservice, $sessionStorage, $location, $timeout) {
-
+		
         $scope.editarpersona = {};
 		
         $scope.editarpersona.id = $sessionStorage.datospersona.per_id;
@@ -36,6 +36,7 @@ angular.module('imperium').controller('editarController', ['$scope', 'editarpers
         $scope.editarpersona.consentimiento = $sessionStorage.datospersona.per_conseninformado;
 
         $scope.contactoEditado = false;
+		$scope.errorcontactoEditado = false;
 
         $scope.editarP = function () {
 //            console.log($scope.editarpersona.fecingresoempresa);
@@ -45,13 +46,14 @@ angular.module('imperium').controller('editarController', ['$scope', 'editarpers
 //			$scope.editarpersona.fecingresoempresa = ($scope.editarpersona.fecingresoempresa === null) ? $sessionStorage.datospersona.per_fecingresoempresa : moment($scope.editarpersona.fecingresoempresa, "YYYY-MM-DD").format('YYYY-MM-DD');
 //            $scope.editarpersona.fecingresoempresa = moment($scope.editarpersona.fecingresoempresa, "YYYY-MM-DD").format('YYYY-MM-DD');
 			
-			console.log($scope.editarpersona);
+//			console.log($scope.editarpersona);
 			
             editarservice.editarperso($scope.editarpersona).then(function succesCallback(response) {
                 $scope.contactoEditado = false;
-                $scope.editarpersona = {};
+				$scope.errorcontactoEditado = false;
+                $scope.editarpersona = {};	
                 if (response.data.code == 500) {
-
+					$scope.errorcontactoEditado = true;
                 } else {
                     $scope.contactoEditado = true;
                     $scope.editarpersona = '';

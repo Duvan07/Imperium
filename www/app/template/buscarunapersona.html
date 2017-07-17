@@ -66,19 +66,20 @@
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     <h4 class="modal-title" id="myModalLabel"><i class="fa fa-trash"></i>
-                                        Eliminar Contacto</h4>
+                                        Eliminar Persona</h4>
                                 </div>
                                 <div class="modal-body">
                                     <div class="alert alert-success" ng-show="usuarioEliminado">
-                                        <center>Usuario Eliminado</center>
+                                        <center>Persona Eliminada con Éxito</center>
                                     </div>
                                     <center>
                                         <h4>Esta seguro?</h4>
-                                        <p>Se va a eliminar el Usuario</p>
+                                        <p>Se va a eliminar el registro de la Persona:</p>
                                         <h3>{{nombre}}</h3>
                                     </center>
                                     <button ng-click="submitEliminarContacto()" type="button" class="btn btn-block btn-sm" style="background-color: #00a2ee; color: white;">Eliminar</button>
-                                </div>
+									<button type="button" class="close btn-danger" aria-label="Close"></button>
+								</div>
                             </div>
                         </div>
                     </div>

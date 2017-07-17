@@ -29,10 +29,9 @@ angular.module('imperium').controller('loginController', ['$scope', 'securitySer
             security.validateUserAndPassword($scope.datos).then(function successCallback(response) {
                 // console.log(response);
                 $scope.usuarioErroneo = false;
-                if (response.data.codigo == 500) {
-                    
-                } else {
+                if (response.data.code == 500) {
                     $scope.usuarioErroneo = true;
+                } else {
                     $scope.datos = {};
                     $sessionStorage.usuario = response.data.usuario[0];
                     if ($sessionStorage.usuario.rol_id == rolAdmin){

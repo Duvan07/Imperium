@@ -39,7 +39,10 @@
                     <form ng-submit="editarP()" class="tab-content">
 						<br>
                         <div class="alert alert-success" ng-show="contactoEditado">
-                            <center>Contacto Editado Con Exito</center>
+                            <center>Registro de persona Editado Con Exito</center>
+                        </div>
+						<div class="alert alert-danger" ng-show="errorcontactoEditado">
+                            <center>Error al tratar de editar</center>
                         </div>
                         <div role="tabpanel" class="tab-pane my-element" ng-class="tabs[0].tab" ng-show="tabs[0].show" id="datosP">
                             <div class="row formularioDp">
